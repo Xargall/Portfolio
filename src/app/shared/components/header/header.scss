@@ -1,0 +1,86 @@
+header {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 35px 96px;
+}
+
+.initials {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  img {
+    width: 36px;
+    height: 48px;
+  }
+
+  p {
+    font-family: 'Karla';
+    font-weight: 700;
+    font-size: 1.75rem;
+    color: white;
+    line-height: 90%;
+  }
+}
+
+.switch {
+  position: relative;
+  display: flex;
+  width: 84px;
+  height: 28px;
+
+  border: 2px solid #3dcfb6;
+  border-radius: 999px;
+  overflow: hidden;
+
+  button {
+    flex: 1;
+    border: none;
+    background: transparent;
+    z-index: 2;
+    cursor: pointer;
+    color: #3dcfb6;
+    opacity: 50%;
+    font-family: 'Fira Code';
+    font-weight: 400;
+    font-size: 1rem;
+  }
+
+  .slider {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: #3dcfb6;
+    border-radius: 999px;
+    transition: transform 0.3s ease;
+    z-index: 1;
+  }
+
+  &.de .slider {
+    transform: translateX(100%);
+  }
+
+  &:not(.de) button:first-of-type,
+  &.de button:last-of-type {
+    color: white;
+    font-weight: 700;
+    opacity: 1;
+  }
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+
+  a {
+    font-family: 'Fira Code';
+    font-weight: 400;
+    font-size: 1.25rem;
+    line-height: 100%;
+    letter-spacing: -3%;
+  }
+}
