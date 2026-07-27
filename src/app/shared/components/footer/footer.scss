@@ -1,13 +1,14 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
 footer {
   width: 100%;
 
-  background-color: #1c1c1c;
+  background-color: v.$primary-color;
   padding: 64px 96px;
   margin-top: auto;
 
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+  @include m.space-between;
 }
 
 .initials {
@@ -26,5 +27,24 @@ footer {
     font-size: 1.75rem;
     color: white;
     line-height: 90%;
+  }
+}
+
+.person_info {
+  @include m.left-align;
+  gap: 30px;
+}
+
+.sub_info {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  p {
+    color: white;
+    font-family: 'Karla';
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 120%;
   }
 }
