@@ -6,9 +6,15 @@
       <button (click)="changeLanguage('en')">EN</button>
       <button (click)="changeLanguage('de')">DE</button>
     </div>
-    <a href="">About me</a>
-    <a href="">Skills</a>
-    <a href="">Projects</a>
+    <a href="#about" [class.active]="activeLink === 'about'" (click)="setActive('about')"
+      >About me</a
+    >
+    <a href="#skills" [class.active]="activeLink === 'skills'" (click)="setActive('skills')"
+      >Skills</a
+    >
+    <a href="#projects" [class.active]="activeLink === 'projects'" (click)="setActive('projects')"
+      >Projects</a
+    >
   </nav>
   <div class="initials">
     <img src="/assets/icons/initialen-logo.png" alt="initials" />

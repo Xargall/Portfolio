@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 })
 export class Header {
   currentLang = 'en';
+  activeLink: string = '';
 
   changeLanguage(lang: 'en' | 'de') {
     this.currentLang = lang;
@@ -17,5 +18,9 @@ export class Header {
 
     // oder Transloco
     // this.transloco.setActiveLang(lang);
+  }
+
+  setActive(link: string) {
+    this.activeLink = link;
   }
 }
