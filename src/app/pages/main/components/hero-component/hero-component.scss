@@ -1,0 +1,179 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+section {
+  position: relative;
+  height: calc(100vh - 100px);
+  overflow: hidden;
+}
+
+.hero__title {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-family: 'Karla';
+    font-weight: 700;
+    font-size: 8rem;
+    color: white;
+    padding-bottom: 40px;
+  }
+
+  span {
+    font-family: 'Fira Code';
+    font-weight: 400;
+    font-size: 2.5rem;
+    color: white;
+  }
+}
+
+.hero__btn {
+  display: flex;
+  gap: 48px;
+}
+
+.hero__down {
+  position: absolute;
+  bottom: 0;
+  left: 96px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+
+  &__icon {
+    @include m.center;
+    width: 30px;
+    height: 48px;
+    border: 1px solid v.$secondary-color;
+    border-radius: 32px;
+
+    svg {
+      animation: bounce 1.5s ease-in-out infinite;
+    }
+  }
+}
+
+.line {
+  width: 1px;
+  height: 240px;
+  background: v.$secondary-color;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(8px);
+  }
+}
+
+.hero__link {
+  @include m.end-center;
+  position: absolute;
+  bottom: 0;
+  right: 96px;
+  gap: 27px;
+
+  a {
+    writing-mode: vertical-rl;
+    transform: rotate(180deg);
+    font-family: 'Karla';
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 120%;
+
+    &.mail {
+      writing-mode: vertical-rl;
+      transform: rotate(180deg);
+      transition: all 250ms ease-in-out;
+
+      &:hover {
+        color: v.$secondary-color;
+      }
+    }
+
+    &:not(.mail) {
+      writing-mode: horizontal-tb;
+      transform: none;
+      position: relative;
+      transition: all 250ms ease-in-out;
+
+      &::after {
+        content: '';
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background: transparent;
+        position: absolute;
+        right: -14px;
+        top: 50%;
+        transform: translateY(-50%);
+        transition: background 0.2s ease;
+      }
+
+      &:hover::after {
+        background: v.$secondary-color;
+      }
+
+      &:hover svg path {
+        fill: white;
+      }
+    }
+  }
+
+  .socials {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .line-right {
+    width: 1px;
+    height: 240px;
+    background: white;
+  }
+}
+
+.hero__marquee {
+  position: absolute;
+  bottom: 50px;
+  left: -5%;
+  width: 110%;
+  transform: rotate(-3deg);
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(5.3px);
+  padding: 16px 0;
+  overflow: hidden;
+
+  .marquee__track {
+    display: flex;
+    white-space: nowrap;
+    animation: marquee 12s linear infinite;
+
+    span {
+      margin-right: 55px;
+      font-family: 'Karla';
+      font-weight: 400;
+      font-size: 2rem;
+      color: v.$secondary-color;
+      line-height: 120%;
+    }
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33.333%);
+  }
+}

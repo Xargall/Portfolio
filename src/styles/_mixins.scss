@@ -16,3 +16,10 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@mixin end-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+}
