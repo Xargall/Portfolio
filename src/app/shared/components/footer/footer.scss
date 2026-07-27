@@ -48,3 +48,49 @@ footer {
     line-height: 120%;
   }
 }
+
+.copyright {
+  p {
+    color: v.$secondary-color;
+    font-family: 'Fira Code';
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 120%;
+  }
+}
+
+.links {
+  @include m.left-align;
+  gap: 8px;
+
+  a {
+    font-family: 'Karla';
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 120%;
+  }
+}
+
+ul {
+  list-style: none;
+  
+  li a{
+    transition: all 250ms ease-in-out;
+  }
+
+  li::before {
+    content: '•';
+    color: v.$secondary-color;
+    margin-right: 0.5rem;
+    opacity: 0;
+    transition: opacity 250ms;
+  }
+  li:hover:before {
+    opacity: 1;
+  }
+
+  li:hover a{
+    transition: all 250ms ease-in-out;
+    color: v.$secondary-color;
+  }
+}
