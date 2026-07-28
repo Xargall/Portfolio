@@ -1,0 +1,42 @@
+@use 'variables' as v;
+@use 'mixins' as m;
+
+.about-me {
+  background-color: v.$primary-color;
+  height: 100dvh;
+  padding: 144px 104px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.portrait {
+  width: 568px;
+  height: 568px;
+  position: relative;
+  img {
+    position: relative;
+    z-index: 1;
+    width: 568px;
+    height: 568px;
+    object-fit: cover;
+    border-radius: 30px;
+    filter: grayscale(100%);
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    top: 30px;
+    bottom: -30px;
+    left: -46px;
+    border-radius: 30px;
+    background: repeating-linear-gradient(
+      -135deg,
+      transparent,
+      transparent 30px,
+      v.$secondary-color 30px,
+      v.$secondary-color 31px
+    );
+  }
+}
