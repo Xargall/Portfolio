@@ -1,0 +1,171 @@
+@use 'variables' as v;
+
+section {
+  height: 100dvh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  padding: 0 104px 72px;
+  background: radial-gradient(ellipse 25% 50% at 0% 50%, rgba(#08463b, 0.3) 0%, #1c1c1c 100%);
+}
+
+.skill__text {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+
+  &__title {
+    font-family: 'Karla';
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 100%;
+    color: v.$secondary-color;
+  }
+
+  &__box {
+    width: 520px;
+    height: 503;
+    display: flex;
+    flex-direction: column;
+    background: rgba(v.$secondary-color, 0.1);
+    border: 1px solid v.$secondary-color;
+    border-radius: 30px;
+    padding: 32px;
+    gap: 40px;
+    margin-top: 20px;
+
+    h3 {
+      font-family: 'Fira Code';
+      font-weight: 700;
+      font-size: 4rem;
+      line-height: 100%;
+      letter-spacing: -3%;
+      color: v.$secondary-color;
+    }
+
+    h4 {
+      font-family: 'Fira Code';
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 100%;
+      letter-spacing: -3%;
+      color: white;
+
+      span {
+        color: v.$secondary-color;
+      }
+    }
+
+    p {
+      font-family: 'Karla';
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 120%;
+      color: white;
+    }
+  }
+}
+
+.skill__overview {
+  justify-self: center;
+}
+
+.skill__overview {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+  align-items: center;
+  justify-items: center;
+}
+
+.skill__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  position: relative;
+  transition: all 250ms ease-in-out;
+
+  img {
+    width: 64px;
+    height: 64px;
+  }
+
+  p {
+    font-family: 'Fira Code';
+    font-weight: 400;
+    color: white;
+    line-height: 120%;
+    letter-spacing: -3%;
+    font-size: 1.125rem;
+    text-align: center;
+  }
+
+  .skill__tooltip {
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    bottom: 110%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: white;
+    border-radius: 16px;
+    padding: 8px 10px;
+    gap: 8px;
+    width: 190px;
+    transition:
+      opacity 250ms ease-in-out,
+      visibility 250ms ease-in-out;
+
+    p {
+      font-family: 'Karla';
+      font-weight: 400;
+      font-size: 1rem;
+      line-height: 100%;
+      color: v.$secondary-color;
+      padding-bottom: 8px;
+    }
+
+    &::after {
+      content: '';
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translateX(-50%);
+      border: 8px solid transparent;
+      border-top-color: white;
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+
+    &__icon {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+
+      img {
+        width: 32px;
+        height: 29px;
+      }
+    }
+  }
+
+  &:hover .skill__tooltip {
+    opacity: 1;
+    visibility: visible;
+    flex-direction: column;
+    gap: 8px;
+    transition:
+      opacity 250ms ease-in-out,
+      visibility 250ms ease-in-out;
+  }
+
+  &.has-tooltip:hover > p {
+    color: v.$secondary-color;
+    transition: all 250ms ease-in-out;
+  }
+}
