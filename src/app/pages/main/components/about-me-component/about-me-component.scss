@@ -1,15 +1,18 @@
 @use 'variables' as v;
 @use 'mixins' as m;
 
-.about-me {
+.about__me {
   background-color: v.$primary-color;
   height: 100dvh;
   padding: 144px 104px;
   display: grid;
+  align-items: center;
   grid-template-columns: 1fr 1fr;
 }
 
 .portrait {
+  align-self: flex-start;
+  justify-self: center;
   width: 568px;
   height: 568px;
   position: relative;
@@ -38,5 +41,68 @@
       v.$secondary-color 30px,
       v.$secondary-color 31px
     );
+  }
+}
+
+.about__text {
+  align-self: flex-end;
+  justify-self: center;
+
+  &__title {
+    font-family: 'Karla';
+    font-weight: 500;
+    font-size: 1.5rem;
+    line-height: 100%;
+    color: v.$secondary-color;
+  }
+}
+
+.about__detail {
+  width: 568px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  background: rgba(v.$secondary-color, 0.1);
+  border: 1px solid v.$secondary-color;
+  border-radius: 30px;
+  padding: 32px;
+  gap: 40px;
+  margin-top: 20px;
+
+  h3 {
+    font-family: 'Fira Code';
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 100%;
+    letter-spacing: -3%;
+    color: v.$secondary-color;
+  }
+
+  p {
+    font-family: 'Karla';
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 120%;
+    color: white;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    list-style: none;
+    padding: 0;
+
+    li {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+
+      img {
+        height: 32px;
+        width: 32px;
+        flex-shrink: 0;
+      }
+    }
   }
 }
