@@ -6,8 +6,13 @@
     projects to see my skills in action.
   </p>
   <div class="project">
-    @for (project of projects; track project) {
-      <div class="project__slide">
+    @for (project of projects; track project; let i = $index) {
+      <div
+        class="project__slide"
+        (mouseenter)="onMouseEnter(i)"
+        (mouseleave)="onMouseLeave()"
+        (click)="openDialog(project)"
+      >
         <div class="project__slide__title">
           <h4>{{ project.name }}</h4>
           <svg
@@ -28,7 +33,17 @@
             <li class="project__slide__item" [class.separator]="!$last">{{ tech }}</li>
           }
         </ul>
+        @if (hoveredIndex === i) {
+          <div class="project__preview">
+            <div class="project__preview__bg">
+              <img [src]="project.img" alt="{{ project.name }}" />
+            </div>
+          </div>
+        }
       </div>
     }
   </div>
+  @if (selectedProject) {
+    <app-dialog [selectedProject]="selectedProject"></app-dialog>
+  }
 </section>

@@ -1,8 +1,10 @@
 @use 'variables' as v;
 
 .project__section {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   padding: 72px 96px 80px;
   background: v.$primary-color;
 
@@ -34,15 +36,19 @@
 }
 
 .project {
+  width: 100%;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   padding-top: 40px;
 
   &__slide {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 880px;
+    width: 100%;
+    max-width: 880px;
     height: 110px;
     padding: 0 32px;
     border-bottom: 1px solid v.$secondary-color;
@@ -51,6 +57,16 @@
 
     &:first-child {
       border-top: 1px solid v.$secondary-color;
+
+      .project__preview {
+        top: -10px;
+      }
+    }
+
+    &:last-child {
+      .project__preview {
+        bottom: -10px;
+      }
     }
 
     &__title {
@@ -94,6 +110,43 @@
         opacity: 1;
         transition: all 150ms ease-in-out;
       }
+    }
+  }
+
+  &__preview {
+    width: 295px;
+    height: 192px;
+    border-radius: 16px;
+    position: absolute;
+    left: 107%;
+
+    &__bg {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        top: 30px;
+        bottom: -20px;
+        right: -20px;
+        border-radius: 16px;
+        background: repeating-linear-gradient(
+          135deg,
+          transparent,
+          transparent 8px,
+          v.$secondary-color 8px,
+          v.$secondary-color 9px,
+        );
+      }
+    }
+
+    img {
+      width: 295px;
+      height: 192px;
+      border-radius: 16px;
+      position: relative;
+      z-index: 1;
     }
   }
 }

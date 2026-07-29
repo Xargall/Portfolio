@@ -1,13 +1,17 @@
 import { Component } from '@angular/core';
 import { ProjectModel } from './project.model';
+import { Dialog } from './dialog/dialog';
 
 @Component({
   selector: 'app-projects-component',
-  imports: [],
+  imports: [Dialog],
   templateUrl: './projects-component.html',
   styleUrl: './projects-component.scss',
 })
 export class ProjectsComponent {
+  hoveredIndex: number | null = null;
+  selectedProject: ProjectModel | null = null;
+
   projects: ProjectModel[] = [
     {
       name: 'PokéDex',
@@ -28,4 +32,16 @@ export class ProjectsComponent {
       demo: '',
     },
   ];
+
+  onMouseEnter(index: number) {
+    this.hoveredIndex = index;
+  }
+
+  onMouseLeave() {
+    this.hoveredIndex = null;
+  }
+
+  openDialog(project: ProjectModel) {
+    this.selectedProject = project;
+  }
 }

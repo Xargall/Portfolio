@@ -9,4 +9,5 @@ import { Component, input } from '@angular/core';
 export class Button {
   label = input<string>('');
   href = input<string>('');
+  showIcon = input<boolean>(false);
 }
