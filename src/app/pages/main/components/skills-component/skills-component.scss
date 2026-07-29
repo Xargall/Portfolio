@@ -1,11 +1,10 @@
 @use 'variables' as v;
 
 section {
-  height: 100dvh;
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 0 104px 72px;
+  padding: 72px 104px 72px;
   background: radial-gradient(ellipse 25% 50% at 0% 50%, rgba(#08463b, 0.3) 0%, #1c1c1c 100%);
 }
 

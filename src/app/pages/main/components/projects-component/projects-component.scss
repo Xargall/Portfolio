@@ -1,0 +1,105 @@
+@use 'variables' as v;
+
+.project__section {
+  display: flex;
+  flex-direction: column;
+  padding: 72px 96px 80px;
+  background: v.$primary-color;
+
+  span {
+    font-family: 'Karla';
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 100%;
+    color: v.$secondary-color;
+  }
+
+  h3 {
+    font-family: 'Fira Code';
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 100%;
+    letter-spacing: -3%;
+    color: v.$secondary-color;
+    margin: 20px 0 40px;
+  }
+
+  p {
+    font-family: 'Karla';
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 120%;
+    color: white;
+  }
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+
+  &__slide {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 880px;
+    height: 110px;
+    padding: 0 32px;
+    border-bottom: 1px solid v.$secondary-color;
+    transition: all 150ms ease-in-out;
+    cursor: pointer;
+
+    &:first-child {
+      border-top: 1px solid v.$secondary-color;
+    }
+
+    &__title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      svg {
+        opacity: 0;
+      }
+    }
+
+    h4 {
+      font-family: 'Fira Code';
+      font-weight: 700;
+      font-size: 1.5rem;
+      line-height: 120%;
+      color: white;
+    }
+
+    ul {
+      display: flex;
+      list-style: none;
+
+      li {
+        font-family: 'Karla';
+        font-weight: 400;
+        font-size: 1.125rem;
+        line-height: 120%;
+        letter-spacing: 0%;
+        color: white;
+        padding: 0 4px;
+      }
+    }
+
+    &:hover {
+      background: rgba(v.$secondary-color, 0.3);
+      transition: all 150ms ease-in-out;
+
+      svg {
+        opacity: 1;
+        transition: all 150ms ease-in-out;
+      }
+    }
+  }
+}
+
+.separator::after {
+  content: '|';
+  padding-left: 4px;
+  color: v.$secondary-color;
+}

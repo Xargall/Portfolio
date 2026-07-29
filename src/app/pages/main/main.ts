@@ -2,10 +2,11 @@ import { Component } from '@angular/core';
 import { HeroComponent } from './components/hero-component/hero-component';
 import { AboutMeComponent } from './components/about-me-component/about-me-component';
 import { SkillsComponent } from './components/skills-component/skills-component';
+import { ProjectsComponent } from './components/projects-component/projects-component';
 
 @Component({
   selector: 'app-main',
-  imports: [HeroComponent, AboutMeComponent, SkillsComponent],
+  imports: [HeroComponent, AboutMeComponent, SkillsComponent, ProjectsComponent],
   templateUrl: './main.html',
   styleUrl: './main.scss',
 })
