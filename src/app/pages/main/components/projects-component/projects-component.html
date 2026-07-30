@@ -45,8 +45,10 @@
   </div>
   @if (selectedProject) {
     <app-dialog
+      (nextProject)="openDialog(projects[selectedIndex], selectedIndex)"
       [selectedProject]="selectedProject"
       [selectedIndex]="selectedIndex"
+      [totalProjects]="projects.length"
       (closeDialog)="selectedProject = null; selectedIndex = 0"
     ></app-dialog>
   }

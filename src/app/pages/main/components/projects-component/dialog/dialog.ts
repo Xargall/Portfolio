@@ -11,18 +11,20 @@ import { DecimalPipe } from '@angular/common';
 })
 export class Dialog {
   selectedProject = input<ProjectModel>();
-  selectedIndex = input<number>();
+  selectedIndex = input<number>(0);
+  totalProjects = input<number>(0);
+  nextProject = output();
   closeDialog = output();
   dialogRef = viewChild<ElementRef<HTMLDialogElement>>('dialogRef');
 
   techIcons: Record<string, string> = {
-    HTML: '/assets/icons/html-logo.svg',
-    CSS: '/assets/icons/css-logo.svg',
-    JavaScript: '/assets/icons/java-script-logo.svg',
-    'Rest-API': '/assets/icons/rest-api-logo.svg',
-    TypeScript: '/assets/icons/type-script-logo.svg-logo.svg',
-    Angular: '/assets/icons/angular-logo.svg',
-    Supabase: '/assets/icons/supabase-logo.svg',
+    HTML: '/assets/icons/html-dialog.svg',
+    CSS: '/assets/icons/css-dialog.svg',
+    JavaScript: '/assets/icons/java-script-dialog.svg',
+    'Rest-API': '/assets/icons/rest-api-dialog.svg',
+    TypeScript: '/assets/icons/type-script-dialog.svg',
+    Angular: '/assets/icons/angular-dialog.svg',
+    Supabase: '/assets/icons/supabase-dialog.svg',
   };
 
   constructor() {

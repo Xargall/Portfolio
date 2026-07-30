@@ -1,5 +1,16 @@
 @use 'variables' as v;
 
+dialog {
+  outline: none;
+  background: none;
+  border: none;
+  padding: 0;
+
+  &::backdrop {
+    background: rgba(v.$primary-color, 0.6);
+  }
+}
+
 .project__dialog {
   width: 100%;
   max-width: 1248px;
@@ -13,10 +24,7 @@
   border-radius: 30px;
 
   display: flex;
-
-  &::backdrop {
-    background: rgba(v.$primary-color, 0.6);
-  }
+  gap: 88px;
 
   &__info {
     display: flex;
@@ -32,10 +40,17 @@
       list-style: none;
       display: flex;
       padding: 0;
+      gap: 16px;
 
       li {
         display: flex;
         align-items: center;
+        font-family: 'Karla';
+        font-weight: 400;
+        font-size: 1rem;
+        line-height: 120%;
+        color: white;
+        gap: 4px;
 
         img {
           width: 24px;
@@ -46,10 +61,103 @@
   }
 
   &__preview {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+
+    button {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 30px;
+      background: none;
+      border: none;
+      cursor: pointer;
+      transition: all 250ms ease-in-out;
+
+      svg {
+        transition: all 250ms ease-in-out;
+        fill: white;
+      }
+
+      &:hover {
+        scale: 1.5;
+        transition: all 250ms ease-in-out;
+
+        svg {
+          fill: v.$secondary-color;
+        }
+      }
+    }
+
+    a {
+      margin-top: 48px;
+      display: flex;
+      gap: 16px;
+      font-family: 'Karla';
+      font-weight: 400;
+      font-size: 1.125rem;
+      line-height: 120%;
+      color: v.$secondary-color;
+
+      svg {
+        transition: all 250ms ease-in-out;
+      }
+
+      &:hover {
+        color: white;
+
+        svg {
+          scale: 1.2;
+          transition: all 250ms ease-in-out;
+        }
+      }
+    }
+
     img {
       width: 520px;
       height: 370px;
       border-radius: 30px;
+      object-fit: cover;
     }
   }
+
+  &__index {
+    font-family: 'Karla';
+    font-weight: 700;
+    font-size: 8rem;
+    line-height: 100%;
+    letter-spacing: -2%;
+    color: v.$secondary-color;
+  }
+
+  &__title {
+    font-family: 'Fira Code';
+    font-weight: 700;
+    font-size: 4rem;
+    line-height: 80%;
+    letter-spacing: -3%;
+    color: white;
+  }
+
+  &__subtitle {
+    font-family: 'Fira Code';
+    font-weight: 700;
+    font-size: 1.5rem;
+    line-height: 120%;
+    color: v.$secondary-color;
+  }
+
+  &__description {
+    font-family: 'Karla';
+    font-weight: 400;
+    font-size: 1.125rem;
+    line-height: 120%;
+    color: white;
+  }
+}
+
+.buttons {
+  display: flex;
+  gap: 32px;
+  padding-top: 40px;
 }
