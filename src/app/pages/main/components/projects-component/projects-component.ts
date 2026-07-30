@@ -11,6 +11,7 @@ import { Dialog } from './dialog/dialog';
 export class ProjectsComponent {
   hoveredIndex: number | null = null;
   selectedProject: ProjectModel | null = null;
+  selectedIndex: number = 0;
 
   projects: ProjectModel[] = [
     {
@@ -41,7 +42,8 @@ export class ProjectsComponent {
     this.hoveredIndex = null;
   }
 
-  openDialog(project: ProjectModel) {
+  openDialog(project: ProjectModel, i: number) {
     this.selectedProject = project;
+    this.selectedIndex = i + 1;
   }
 }

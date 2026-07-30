@@ -1,9 +1,9 @@
-<dialog class="project__dialog" #dialogRef>
+<dialog class="project__dialog" #dialogRef (close)="closeDialog.emit()">
   <div class="project__dialog__info">
-    <span class="project__index">{{ selectedIndex() }}</span>
-    <h3 class="project__title">{{ selectedProject()?.name }}</h3>
-    <h4 class="Project__subtitle">What is this Project about?</h4>
-    <p class="project__description">{{ selectedProject()?.description }}</p>
+    <span class="project__dialog__index">{{ selectedIndex() | number: '2.0-0' }}</span>
+    <h3 class="project___dialog__title">{{ selectedProject()?.name }}</h3>
+    <h4 class="Project__dialog__subtitle">What is this Project about?</h4>
+    <p class="project__dialog__description">{{ selectedProject()?.description }}</p>
     <ul class="techs">
       @for (tech of selectedProject()?.techs; track tech) {
         <li>
@@ -25,7 +25,7 @@
       ></app-button>
     </div>
   </div>
-  <div class="porject__dialog__preview">
+  <div class="project__dialog__preview">
     <button>
       <svg
         width="18"

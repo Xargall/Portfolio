@@ -11,7 +11,7 @@
         class="project__slide"
         (mouseenter)="onMouseEnter(i)"
         (mouseleave)="onMouseLeave()"
-        (click)="openDialog(project)"
+        (click)="openDialog(project, i)"
       >
         <div class="project__slide__title">
           <h4>{{ project.name }}</h4>
@@ -44,6 +44,10 @@
     }
   </div>
   @if (selectedProject) {
-    <app-dialog [selectedProject]="selectedProject"></app-dialog>
+    <app-dialog
+      [selectedProject]="selectedProject"
+      [selectedIndex]="selectedIndex"
+      (closeDialog)="selectedProject = null; selectedIndex = 0"
+    ></app-dialog>
   }
 </section>
