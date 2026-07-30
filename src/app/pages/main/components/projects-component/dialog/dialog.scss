@@ -6,6 +6,10 @@ dialog {
   border: none;
   padding: 0;
 
+  &:focus {
+    outline: none;
+  }
+
   &::backdrop {
     background: rgba(v.$primary-color, 0.6);
   }
@@ -98,6 +102,7 @@ dialog {
       font-size: 1.125rem;
       line-height: 120%;
       color: v.$secondary-color;
+      cursor: pointer;
 
       svg {
         transition: all 250ms ease-in-out;

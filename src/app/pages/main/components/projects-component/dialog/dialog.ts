@@ -31,6 +31,7 @@ export class Dialog {
     effect(() => {
       const dialog = this.dialogRef()?.nativeElement;
       dialog?.showModal();
+      dialog?.focus();
       document.body.style.overflow = 'hidden';
 
       dialog?.addEventListener('close', () => {
