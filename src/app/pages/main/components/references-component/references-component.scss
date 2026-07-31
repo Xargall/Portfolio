@@ -18,9 +18,11 @@
 
   &__quote {
     position: absolute;
-    top: 10px;
-    left: 23%;
+    left: calc(50% - 375px);
+    top: 3px;
     z-index: 11;
+    font-size: 80px;
+    color: white;
   }
 
   &__slider {
