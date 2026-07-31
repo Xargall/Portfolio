@@ -1,0 +1,152 @@
+@use 'variables' as v;
+
+.reference {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  background: v.$primary-color;
+  padding: 72px 96px;
+
+  &__title {
+    font-family: 'Fira Code';
+    font-weight: 700;
+    font-size: 2rem;
+    color: v.$secondary-color;
+    margin-bottom: 48px;
+  }
+
+  &__quote {
+    position: absolute;
+    top: 10px;
+    left: 23%;
+    z-index: 11;
+  }
+
+  &__slider {
+    height: 300px;
+    width: calc(100% + 192px);
+    position: relative;
+    overflow: hidden;
+    margin-left: -96px;
+    margin-right: -96px;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      width: 200px;
+      z-index: 10;
+      pointer-events: none;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(to right, v.$primary-color 30%, transparent 100%);
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(to left, v.$primary-color 30%, transparent 100%);
+    }
+  }
+
+  &__card {
+    position: absolute;
+    width: 632px;
+    height: 248px;
+    top: 50%;
+    margin-top: -124px;
+    left: 50%;
+    margin-left: -316px;
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: rgba(v.$secondary-color, 0.1);
+    border: 1px solid v.$secondary-color;
+    border-radius: 32px;
+    transition:
+      transform 500ms ease-in-out,
+      opacity 500ms ease-in-out,
+      scale 500ms ease-in-out,
+      background 500ms ease-in-out;
+
+    z-index: -1;
+    padding: 52px 42px;
+
+    &.active {
+      scale: 1.05;
+      background: rgba(v.$secondary-color, 0.3);
+      z-index: 2;
+    }
+
+    &.left,
+    &.right {
+      opacity: 0.5;
+      z-index: 1;
+      cursor: pointer;
+    }
+
+    &.far-left,
+    &.far-right {
+      opacity: 0;
+      transition: none;
+      pointer-events: none;
+    }
+
+    p {
+      font-family: 'Karla';
+      font-weight: 400;
+      font-size: 1.25rem;
+      line-height: 120%;
+      color: white;
+    }
+
+    &__person {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+
+      hr {
+        flex: 1;
+        border: none;
+        border-top: 1px solid white;
+      }
+      p {
+        font-family: 'Karla';
+        font-weight: 400;
+
+        font-size: 1.125rem;
+        line-height: 120%;
+        color: white;
+      }
+    }
+  }
+
+  &__navigation {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-top: 32px;
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+  }
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: white;
+
+  &.active {
+    background-color: v.$secondary-color;
+  }
+}
