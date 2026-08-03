@@ -10,4 +10,6 @@ export class Button {
   label = input<string>('');
   href = input<string>('');
   showIcon = input<boolean>(false);
+  disabled = input<boolean>(false);
+  type = input<'link' | 'submit'>('link');
 }

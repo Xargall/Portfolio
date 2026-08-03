@@ -4,6 +4,7 @@ import { AboutMeComponent } from './components/about-me-component/about-me-compo
 import { SkillsComponent } from './components/skills-component/skills-component';
 import { ProjectsComponent } from './components/projects-component/projects-component';
 import { ReferencesComponent } from './components/references-component/references-component';
+import { ContactFormComponent } from './components/contact-form-component/contact-form-component';
 
 @Component({
   selector: 'app-main',
@@ -13,6 +14,7 @@ import { ReferencesComponent } from './components/references-component/reference
     SkillsComponent,
     ProjectsComponent,
     ReferencesComponent,
+    ContactFormComponent,
   ],
   templateUrl: './main.html',
   styleUrl: './main.scss',

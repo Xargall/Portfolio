@@ -1,7 +1,12 @@
 @use 'variables' as v;
 
-a {
+a,
+button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   border: 1px solid white;
+  background: transparent;
   border-radius: 100px;
   gap: 10px;
   padding: 13px 24px;
@@ -9,6 +14,7 @@ a {
   font-weight: 400;
   font-size: 1.125rem;
   transition: all 250ms;
+  color: white;
 
   &:hover {
     color: v.$secondary-color;
@@ -22,7 +28,63 @@ a {
   }
 }
 
+button:disabled {
+  cursor: not-allowed;
+  background: transparent;
+  border-color: rgba(white, 0.4);
+  color: rgba(white, 0.4);
+
+  &:hover {
+    color: rgba(white, 0.4);
+    border-color: rgba(white, 0.4);
+
+    svg {
+      transform: none;
+    }
+  }
+}
+
 svg {
   width: 10px;
   height: 10px;
+}
+
+.label {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  margin: 0 -24px;
+  padding: 0 24px;
+}
+
+.label__text {
+  display: inline-block;
+  white-space: nowrap;
+  transform: translateX(0);
+  transition: transform 250ms ease;
+}
+
+a:hover .label__text,
+button:hover .label__text {
+  animation: marquee-loop 3s linear infinite;
+}
+
+button:disabled:hover .label__text {
+  animation: none;
+  transform: translateX(0);
+}
+
+@keyframes marquee-loop {
+  0% {
+    transform: translateX(0);
+  }
+  45% {
+    transform: translateX(calc(-100% - 24px));
+  }
+  45.01% {
+    transform: translateX(calc(100% + 24px));
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
