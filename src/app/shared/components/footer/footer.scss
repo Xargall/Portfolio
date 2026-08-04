@@ -5,7 +5,7 @@ footer {
   width: 100%;
 
   background-color: v.$primary-color;
-  padding: 64px 96px;
+  padding: 72px 96px 64px;
   margin-top: auto;
 
   @include m.space-between;
@@ -73,8 +73,8 @@ footer {
 
 ul {
   list-style: none;
-  
-  li a{
+
+  li a {
     transition: all 250ms ease-in-out;
   }
 
@@ -89,7 +89,7 @@ ul {
     opacity: 1;
   }
 
-  li:hover a{
+  li:hover a {
     transition: all 250ms ease-in-out;
     color: v.$secondary-color;
   }

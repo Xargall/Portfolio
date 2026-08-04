@@ -37,6 +37,7 @@
 
 .project {
   width: 100%;
+  max-width: 880px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -136,7 +137,7 @@
           transparent,
           transparent 8px,
           v.$secondary-color 8px,
-          v.$secondary-color 9px,
+          v.$secondary-color 9px
         );
       }
     }

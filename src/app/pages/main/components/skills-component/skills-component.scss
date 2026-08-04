@@ -85,6 +85,10 @@ section {
   position: relative;
   transition: all 250ms ease-in-out;
 
+  &:hover {
+    scale: 1.1;
+  }
+
   img {
     width: 64px;
     height: 64px;
@@ -98,6 +102,10 @@ section {
     letter-spacing: -3%;
     font-size: 1.125rem;
     text-align: center;
+  }
+
+  .has-tooltip {
+    cursor: pointer;
   }
 
   .skill__tooltip {

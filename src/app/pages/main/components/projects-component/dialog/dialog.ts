@@ -39,4 +39,8 @@ export class Dialog {
       });
     });
   }
+
+  close() {
+    this.dialogRef()?.nativeElement.close();
+  }
 }

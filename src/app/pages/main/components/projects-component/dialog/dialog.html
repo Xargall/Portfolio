@@ -1,4 +1,4 @@
-<dialog #dialogRef (close)="closeDialog.emit()" (click)="closeDialog.emit()">
+<dialog #dialogRef (close)="closeDialog.emit()" (click)="close()">
   <div class="project__dialog" (click)="$event.stopPropagation()">
     <div class="project__dialog__info">
       <span class="project__dialog__index">{{ selectedIndex() | number: '2.0-0' }}</span>
@@ -27,7 +27,7 @@
       </div>
     </div>
     <div class="project__dialog__preview">
-      <button (click)="closeDialog.emit()">
+      <button (click)="close()">
         <svg
           width="18"
           height="18"
