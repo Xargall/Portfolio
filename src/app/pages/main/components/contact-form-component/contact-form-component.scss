@@ -1,4 +1,5 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
 .contact {
   display: flex;
@@ -7,6 +8,7 @@
   padding: 72px 96px;
   gap: 64px;
   background: v.$primary-color;
+  @include m.content-width;
 
   &__text {
     display: flex;

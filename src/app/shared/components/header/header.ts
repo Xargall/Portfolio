@@ -1,14 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+import { Logo } from '../../logo/logo';
 
 @Component({
   selector: 'app-header',
-  imports: [],
+  imports: [Logo],
   templateUrl: './header.html',
   styleUrl: './header.scss',
 })
 export class Header {
   currentLang = 'en';
   activeLink: string = '';
+  isMenuOpen = signal(false);
 
   changeLanguage(lang: 'en' | 'de') {
     this.currentLang = lang;
@@ -22,5 +24,9 @@ export class Header {
 
   setActive(link: string) {
     this.activeLink = link;
+  }
+
+  toggleMenu() {
+    this.isMenuOpen.update((current) => !current);
   }
 }

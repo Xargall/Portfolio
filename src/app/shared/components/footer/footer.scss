@@ -9,6 +9,7 @@ footer {
   margin-top: auto;
 
   @include m.space-between;
+  @include m.content-width;
 }
 
 .initials {

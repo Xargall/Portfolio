@@ -4,7 +4,16 @@
 section {
   position: relative;
   height: calc(100vh - 100px);
+  width: 100%;
   overflow: hidden;
+  padding: 0 96px;
+}
+
+.hero__grid {
+  position: relative;
+  max-width: 1440px;
+  height: 100%;
+  margin: 0 auto;
 }
 
 .hero__title {

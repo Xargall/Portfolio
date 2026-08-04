@@ -23,3 +23,9 @@
   justify-content: flex-end;
   align-items: center;
 }
+
+@mixin content-width {
+  @media screen and (min-width: 1440px) {
+    padding-inline:max(96px, calc(50% - 720px));
+  }
+}

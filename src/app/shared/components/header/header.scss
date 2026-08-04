@@ -1,30 +1,21 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
 header {
+  position: relative;
   width: 100%;
   height: 100px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 35px 96px;
+  @include m.content-width;
 }
 
 .initials {
-  display: flex;
-  align-items: center;
-  gap: 8px;
-
-  img {
-    width: 36px;
+  svg {
+    width: 133px;
     height: 48px;
-  }
-
-  p {
-    font-family: 'Karla';
-    font-weight: 700;
-    font-size: 1.75rem;
-    color: white;
-    line-height: 90%;
   }
 }
 
@@ -81,7 +72,7 @@ nav {
   a {
     font-family: 'Fira Code';
     font-weight: 400;
-    font-size: 1.25rem;
+    font-size: clamp(1.125rem, calc(1.089rem + 0.1786vw), 1.25rem);
     line-height: 100%;
     letter-spacing: -3%;
     position: relative;
@@ -109,5 +100,61 @@ nav {
         background: v.$secondary-color;
       }
     }
+  }
+}
+
+.burger-button {
+  button {
+    background: none;
+    border: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .initials {
+    order: 1;
+  }
+
+  nav {
+    order: 2;
+    position: absolute;
+    width: 239px;
+    height: 252px;
+    padding: 40px 77px;
+    gap: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    top: 70px;
+    right: 10px;
+    border: 1px solid v.$secondary-color;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #0a0f0e 0%, #0f1f1d 40%, #0f3a36 70%, #0b2a26 100%);
+    z-index: 100;
+
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(-12px);
+    transition:
+      opacity 300ms ease,
+      transform 300ms ease;
+
+    &.open {
+      opacity: 1;
+      pointer-events: auto;
+      transform: translateY(0);
+    }
+
+    .switch {
+      order: 1;
+    }
+  }
+
+  .burger-button {
+    order: 3;
+  }
+
+  header {
+    padding: 32px 16px;
   }
 }

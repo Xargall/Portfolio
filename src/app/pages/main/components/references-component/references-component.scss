@@ -1,4 +1,5 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
 .reference {
   display: flex;
@@ -7,6 +8,7 @@
   width: 100%;
   background: v.$primary-color;
   padding: 72px 96px;
+  @include m.content-width;
 
   &__title {
     font-family: 'Fira Code';
