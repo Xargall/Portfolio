@@ -111,6 +111,10 @@ nav {
 }
 
 @media (max-width: 767px) {
+  header {
+    height: 50px;
+    padding: 16px 16px 0;
+  }
   .initials {
     order: 1;
   }
@@ -152,9 +156,5 @@ nav {
 
   .burger-button {
     order: 3;
-  }
-
-  header {
-    padding: 32px 16px;
   }
 }
