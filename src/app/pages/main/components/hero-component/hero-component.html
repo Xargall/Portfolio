@@ -82,7 +82,7 @@
   </div>
   <div class="hero__marquee">
     <div class="marquee__track">
-      @for (item of doubled; track item) {
+      @for (item of doubled; track $index) {
         <span>{{ item }}</span>
         <span>•</span>
       }
