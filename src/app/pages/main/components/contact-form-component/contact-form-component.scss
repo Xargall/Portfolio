@@ -3,8 +3,7 @@
 .contact {
   display: flex;
   width: 100%;
-  height: 100dvh;
-  justify-content: space-between;
+  justify-content: center;
   padding: 72px 96px;
   gap: 64px;
   background: v.$primary-color;
@@ -107,6 +106,7 @@
     &__mail {
       width: 100%;
       label {
+        position: relative;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -121,6 +121,14 @@
         font-size: 1.5rem;
         line-height: 120%;
         color: v.$secondary-color;
+
+        .email-tooltip {
+          position: absolute;
+          top: 100px;
+          left: 25px;
+          font-size: 1.125rem;
+          color: rgba(#ec7b7bcc, 0.8);
+        }
       }
 
       input {
