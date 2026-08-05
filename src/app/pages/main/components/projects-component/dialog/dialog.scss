@@ -5,6 +5,8 @@ dialog {
   background: none;
   border: none;
   padding: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
 
   &:focus {
     outline: none;
@@ -18,7 +20,7 @@ dialog {
 .project__dialog {
   width: 100%;
   max-width: 1248px;
-  height: 656px;
+  height: 880px;
   margin: auto;
   position: fixed;
   inset: 0;
@@ -38,13 +40,14 @@ dialog {
     width: 100%;
     max-width: 480px;
     height: 100%;
-    max-height: 474px;
+    max-height: 680px;
 
     ul {
       list-style: none;
       display: flex;
       padding: 0;
       gap: 16px;
+      flex-wrap: wrap;
 
       li {
         display: flex;
@@ -62,6 +65,13 @@ dialog {
         }
       }
     }
+  }
+
+  &__text-block {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    min-width: 0;
   }
 
   &__preview {
@@ -99,7 +109,7 @@ dialog {
       gap: 16px;
       font-family: 'Karla';
       font-weight: 400;
-      font-size: 1.125rem;
+      font-size: clamp(1rem, 0.911rem + 0.238vw, 1.125rem);
       line-height: 120%;
       color: v.$secondary-color;
       cursor: pointer;
@@ -119,8 +129,9 @@ dialog {
     }
 
     img {
-      width: 520px;
-      height: 370px;
+      width: 100%;
+      max-width: 520px;
+      height: 530px;
       border-radius: 30px;
       object-fit: cover;
     }
@@ -129,7 +140,7 @@ dialog {
   &__index {
     font-family: 'Karla';
     font-weight: 700;
-    font-size: 8rem;
+    font-size: clamp(4rem, 2.857rem + 5.714vw, 8rem);
     line-height: 100%;
     letter-spacing: -2%;
     color: v.$secondary-color;
@@ -138,16 +149,18 @@ dialog {
   &__title {
     font-family: 'Fira Code';
     font-weight: 700;
-    font-size: 4rem;
+    font-size: clamp(3.25rem, 3.036rem + 1.071vw, 4rem);
     line-height: 80%;
     letter-spacing: -3%;
     color: white;
+    overflow-wrap: break-word;
+    word-break: break-word;
   }
 
   &__subtitle {
     font-family: 'Fira Code';
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: clamp(1.125rem, 1.018rem + 0.536vw, 1.5rem);
     line-height: 120%;
     color: v.$secondary-color;
   }
@@ -155,7 +168,7 @@ dialog {
   &__description {
     font-family: 'Karla';
     font-weight: 400;
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 0.911rem + 0.238vw, 1.125rem);
     line-height: 120%;
     color: white;
   }
@@ -165,4 +178,85 @@ dialog {
   display: flex;
   gap: 32px;
   padding-top: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  dialog {
+    width: 100%;
+    max-width: 100vw;
+    height: 100dvh;
+  }
+
+  .project__dialog {
+    width: 100%;
+    max-width: 100vw;
+    height: 100dvh;
+    max-height: 100dvh;
+    padding: 16px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-rows: auto minmax(0, 1fr) auto auto auto auto auto;
+    gap: 12px;
+    margin: 0;
+    grid-template-areas:
+      'close'
+      'preview'
+      'index'
+      'title'
+      'textblock'
+      'buttons'
+      'next';
+
+    &__info {
+      display: contents;
+
+      span {
+        grid-area: index;
+        font-size: clamp(2.5rem, 2rem + 3vw, 4rem);
+      }
+
+      h3 {
+        grid-area: title;
+        font-size: clamp(2rem, 1.25rem + 5vw, 3.25rem);
+      }
+
+      .project__dialog__text-block {
+        grid-area: textblock;
+        gap: 6px;
+        min-width: 0;
+      }
+
+      .buttons {
+        grid-area: buttons;
+        padding: 0;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+    }
+
+    &__preview {
+      display: contents;
+
+      button {
+        grid-area: close;
+        justify-self: flex-end;
+        margin-bottom: 0;
+      }
+
+      img {
+        grid-area: preview;
+        width: 100%;
+        height: 100%;
+        min-height: 0;
+        object-fit: cover;
+      }
+
+      a {
+        grid-area: next;
+        margin-top: 0;
+        justify-self: flex-end;
+      }
+    }
+  }
 }
