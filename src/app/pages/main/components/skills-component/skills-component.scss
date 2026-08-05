@@ -24,8 +24,9 @@ section {
   }
 
   &__box {
-    width: 520px;
-    height: 503;
+    width: 100%;
+    max-width: 520px;
+    height: auto;
     display: flex;
     flex-direction: column;
     background: rgba(v.$secondary-color, 0.1);
@@ -38,7 +39,7 @@ section {
     h3 {
       font-family: 'Fira Code';
       font-weight: 700;
-      font-size: 4rem;
+      font-size: clamp(2.5rem, 2.071rem + 2.143vw, 4rem);
       line-height: 100%;
       letter-spacing: -3%;
       color: v.$secondary-color;
@@ -47,7 +48,7 @@ section {
     h4 {
       font-family: 'Fira Code';
       font-weight: 700;
-      font-size: 1.5rem;
+      font-size: clamp(1.125rem, 1.018rem + 0.536vw, 1.5rem);
       line-height: 100%;
       letter-spacing: -3%;
       color: white;
@@ -60,7 +61,7 @@ section {
     p {
       font-family: 'Karla';
       font-weight: 400;
-      font-size: 1.125rem;
+      font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
       line-height: 120%;
       color: white;
     }
@@ -102,8 +103,21 @@ section {
     color: white;
     line-height: 120%;
     letter-spacing: -3%;
-    font-size: 1.125rem;
+    font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
     text-align: center;
+  }
+
+  &.has-tooltip {
+    touch-action: none;
+    -webkit-user-select: none;
+    user-select: none;
+
+    img {
+      -webkit-touch-callout: none;
+      -webkit-user-select: none;
+      user-select: none;
+      -webkit-user-drag: none;
+    }
   }
 
   .has-tooltip {
@@ -163,7 +177,7 @@ section {
     }
   }
 
-  &:hover .skill__tooltip {
+  &.tooltip-active .skill__tooltip {
     opacity: 1;
     visibility: visible;
     flex-direction: column;
@@ -176,5 +190,47 @@ section {
   &.has-tooltip:hover > p {
     color: v.$secondary-color;
     transition: all 250ms ease-in-out;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  section {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 16px;
+    gap: 40px;
+  }
+
+  .skill__text {
+    &__box {
+      padding: 24px 30px;
+    }
+  }
+
+  .skill__overview {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    align-items: center;
+    justify-items: center;
+  }
+
+  .skill__item {
+    img {
+      width: 50px;
+      height: 56px;
+    }
+
+    .skill__tooltip {
+      left: auto;
+      right: 0;
+      transform: none;
+
+      &::after {
+        left: auto;
+        right: 35px;
+        transform: none;
+      }
+    }
   }
 }

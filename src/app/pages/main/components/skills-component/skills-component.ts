@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
 import { Skills } from './skills';
 import { Button } from '../../../../shared/button/button';
 
@@ -9,6 +9,8 @@ import { Button } from '../../../../shared/button/button';
   styleUrl: './skills-component.scss',
 })
 export class SkillsComponent {
+  activeTooltip = signal<string | null>(null);
+
   skills: Skills[] = [
     { name: 'HTML', icon: '/assets/icons/html-logo.svg' },
     { name: 'CSS', icon: '/assets/icons/css-logo.svg' },
@@ -20,4 +22,25 @@ export class SkillsComponent {
     { name: 'Supabase', icon: '/assets/icons/supabase-logo.svg' },
     { name: 'Growth Mindset', icon: '/assets/icons/mindset-logo.svg', tooltip: true },
   ];
+
+  onPointerEnter(skill: Skills, event: PointerEvent) {
+    if (!skill.tooltip || event.pointerType !== 'mouse') return;
+    this.activeTooltip.set(skill.name);
+  }
+
+  onPointerLeave(skill: Skills, event: PointerEvent) {
+    if (!skill.tooltip || event.pointerType !== 'mouse') return;
+    this.activeTooltip.set(null);
+  }
+
+  onPointerDown(skill: Skills, event: PointerEvent) {
+    if (!skill.tooltip || event.pointerType === 'mouse') return;
+    event.preventDefault();
+    this.activeTooltip.set(skill.name);
+  }
+
+  onPointerUp(skill: Skills) {
+    if (!skill.tooltip) return;
+    this.activeTooltip.set(null);
+  }
 }

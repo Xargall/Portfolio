@@ -16,7 +16,16 @@
   </div>
   <div class="skill__overview">
     @for (skill of skills; track skill.name) {
-      <div class="skill__item" [class.has-tooltip]="skill.tooltip">
+      <div
+        class="skill__item"
+        [class.has-tooltip]="skill.tooltip"
+        [class.tooltip-active]="activeTooltip() === skill.name"
+        (pointerenter)="onPointerEnter(skill, $event)"
+        (pointerleave)="onPointerLeave(skill, $event)"
+        (pointerdown)="onPointerDown(skill, $event)"
+        (pointerup)="onPointerUp(skill)"
+        (pointercancel)="onPointerUp(skill)"
+      >
         @if (skill.tooltip) {
           <div class="skill__tooltip">
             <p>I have a special interest in learning</p>
