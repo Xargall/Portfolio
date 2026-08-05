@@ -3,7 +3,7 @@
 
 .about__me {
   background-color: v.$primary-color;
-  padding: 144px 104px 72px;
+  padding: 144px clamp(48px, calc(-56px + 10vw), 104px) 72px;
   display: grid;
   align-items: center;
   grid-template-columns: 1fr 1fr;
@@ -144,5 +144,50 @@
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .about__me {
+    display: flex;
+    flex-direction: column;
+    padding: 100px 48px 50px;
+    gap: 40px;
+  }
+
+  .portrait {
+    max-width: 568px;
+    width: 100%;
+
+    &::before {
+      top: 20px;
+      bottom: -20px;
+      left: -24px;
+    }
+  }
+
+  .about__detail {
+    max-width: 600px;
+    align-self: center;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1280px) {
+  .about__me {
+    gap: 24px;
+  }
+
+  .about__detail {
+    max-width: 480px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .about__me {
+    gap: 48px;
+  }
+
+  .about__detail {
+    max-width: 568px;
   }
 }

@@ -180,15 +180,21 @@
     }
 
     &__quote {
-      top: 10px;
-      left: 11%;
+      top: 15px;
+      left: 36px;
       transform: translateX(-50%);
     }
 
     &__card {
-      max-width: calc(100% - 32px);
+      max-width: min(calc(100% - 32px), 480px);
       min-height: 280px;
       padding: 40px;
     }
+  }
+}
+
+@media screen and (min-width: 512px) and (max-width: 767px) {
+  .reference__quote {
+    left: calc(50% - 240px);
   }
 }

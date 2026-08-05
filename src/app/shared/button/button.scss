@@ -15,6 +15,7 @@ button {
   font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
   transition: all 250ms;
   color: white;
+  cursor: pointer;
 
   &:hover {
     color: v.$secondary-color;
@@ -86,5 +87,12 @@ button:disabled:hover .label__text {
   }
   100% {
     transform: translateX(0);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .label {
+    margin: 0 -12px;
+    padding: 0 12px;
   }
 }

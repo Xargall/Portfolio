@@ -6,7 +6,7 @@ section {
   height: calc(100vh - 100px);
   width: 100%;
   overflow: hidden;
-  padding: 0 96px;
+  padding-inline: clamp(0px, calc(-192px + 20vw), 96px);
 }
 
 .hero__grid {
@@ -29,7 +29,7 @@ section {
   h1 {
     font-family: 'Karla';
     font-weight: 700;
-    font-size: clamp(2.5rem, calc(0.929rem + 7.857vw), 8rem);
+    font-size: clamp(2.25rem, 0.607rem + 8.214vw, 8rem);
     color: white;
     padding-bottom: 40px;
     white-space: normal;
@@ -38,7 +38,7 @@ section {
   span {
     font-family: 'Fira Code';
     font-weight: 400;
-    font-size: clamp(1.433rem, calc(1.126rem + 1.527vw), 2.5rem);
+    font-size: clamp(1.25rem, 0.893rem + 1.786vw, 2.5rem);
     color: white;
   }
 }
@@ -290,8 +290,35 @@ section {
     margin-bottom: 32px;
   }
 
-  .hero__marquee{
+  .hero__marquee {
     padding: 8px 0;
     bottom: 35px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  section {
+    padding: 0;
+  }
+
+  .hero__down {
+    left: 48px;
+  }
+
+  .hero__link {
+    right: 48px;
+  }
+
+  .hero__link {
+    .mail__text {
+      display: none;
+    }
+    .mail__icon {
+      display: flex;
+    }
+    a.mail__icon {
+      transform: none;
+      writing-mode: horizontal-tb;
+    }
   }
 }
