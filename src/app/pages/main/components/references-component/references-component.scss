@@ -13,18 +13,22 @@
   &__title {
     font-family: 'Fira Code';
     font-weight: 700;
-    font-size: 2rem;
+    font-size: clamp(1.25rem, 0.714rem + 1.429vw, 2rem);
     color: v.$secondary-color;
     margin-bottom: 48px;
   }
 
   &__quote {
     position: absolute;
+    top: 10px;
     left: calc(50% - 375px);
-    top: 3px;
     z-index: 11;
-    font-size: 80px;
-    color: white;
+    line-height: 0;
+
+    svg {
+      width: clamp(48px, 6vw + 24px, 90px);
+      height: auto;
+    }
   }
 
   &__slider {
@@ -34,6 +38,8 @@
     overflow: hidden;
     margin-left: -96px;
     margin-right: -96px;
+    display: grid;
+    place-items: center;
 
     &::before,
     &::after {
@@ -58,14 +64,12 @@
   }
 
   &__card {
-    position: absolute;
-    width: 632px;
-    height: 248px;
-    top: 50%;
-    margin-top: -124px;
-    left: 50%;
-    margin-left: -316px;
-    padding: 32px;
+    grid-column: 1;
+    grid-row: 1;
+    width: 100%;
+    max-width: 632px;
+    min-height: 248px;
+    padding: 52px 42px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -79,7 +83,6 @@
       background 500ms ease-in-out;
 
     z-index: -1;
-    padding: 52px 42px;
 
     &.active {
       scale: 1.05;
@@ -104,7 +107,7 @@
     p {
       font-family: 'Karla';
       font-weight: 400;
-      font-size: 1.25rem;
+      font-size: clamp(1rem, 0.821rem + 0.476vw, 1.25rem);
       line-height: 120%;
       color: white;
     }
@@ -123,7 +126,7 @@
         font-family: 'Karla';
         font-weight: 400;
 
-        font-size: 1.125rem;
+        font-size: clamp(1rem, 0.911rem + 0.238vw, 1.125rem);
         line-height: 120%;
         color: white;
       }
@@ -152,5 +155,40 @@
 
   &.active {
     background-color: v.$secondary-color;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .reference {
+    padding: 50px 16px;
+
+    &__title {
+      text-align: center;
+      margin: 0;
+    }
+
+    &__slider {
+      width: calc(100% + 32px);
+      height: 340px;
+      margin-left: -16px;
+      margin-right: -16px;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+    }
+
+    &__quote {
+      top: 10px;
+      left: 11%;
+      transform: translateX(-50%);
+    }
+
+    &__card {
+      max-width: calc(100% - 32px);
+      min-height: 280px;
+      padding: 40px;
+    }
   }
 }
