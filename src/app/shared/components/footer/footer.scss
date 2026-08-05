@@ -16,19 +16,6 @@ footer {
   display: flex;
   align-items: center;
   gap: 8px;
-
-  img {
-    width: 36px;
-    height: 48px;
-  }
-
-  p {
-    font-family: 'Karla';
-    font-weight: 700;
-    font-size: 1.75rem;
-    color: white;
-    line-height: 90%;
-  }
 }
 
 .person_info {
@@ -93,5 +80,43 @@ ul {
   li:hover a {
     transition: all 250ms ease-in-out;
     color: v.$secondary-color;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  footer {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    row-gap: 32px;
+    column-gap: 16px;
+    padding: 50px 16px 32px;
+  }
+
+  .person {
+    grid-column: 1;
+    grid-row: 1;
+  }
+
+  .person_info {
+    gap: 16px;
+  }
+
+  .link-list {
+    grid-column: 2;
+    grid-row: 1;
+    justify-self: end;
+  }
+
+  .links {
+    text-align: center;
+    align-items: flex-start;
+  }
+
+  .copyright {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    text-align: center;
+    padding-top: 24px;
   }
 }
