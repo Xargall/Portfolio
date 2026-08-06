@@ -1,0 +1,28 @@
+{
+  "nav": {
+    "about": "Über mich",
+    "skills": "Skills",
+    "projects": "Projekte"
+  },
+  "hero": {
+    "cta_work": "Meine Arbeit",
+    "cta_contact": "Kontakt",
+    "subtitle": "Fullstack Entwickler",
+    "marquee": {
+      "remote": "Verfügbar für Mobiles Arbeiten",
+      "role": "Fullstack Entwickler",
+      "location": "Aus Leipzig",
+      "open": "Arbeitssuchend"
+    }
+  },
+  "about": {
+    "title": "Wer bin ich",
+    "heading": "Über mich",
+    "intro": "Hey, ich bin Mathias! Coding liegt mir im Blut — es gibt kaum etwas Befriedigenderes, als aus einer leeren Datei etwas zum Leben zu erwecken. Ich schärfe meine Skills kontinuierlich, ob durch neue Frameworks oder knifflige Probleme. Mein Antrieb: eine starke Zukunft in der Tech-Welt und Code, der bleibt.",
+    "items": {
+      "location": "In Leipzig zuhause — aber nicht gebunden. Remote-Arbeit ist für mich selbstverständlich, und für die richtige Möglichkeit würde ich auch einen Umzug nicht ausschließen.",
+      "mindset": "Neue Technologien zu entdecken macht mir echten Spaß — es hält die Arbeit spannend und sorgt dafür, dass ich mich stetig weiterentwickle. Auf dem neuesten Stand zu bleiben ist für mich keine Pflicht, sondern Einstellung.",
+      "problem": "Wenn ich auf ein Problem stoße, lasse ich nicht locker bis es gelöst ist. Ich gehe Herausforderungen analytisch an — zerlege sie in Teile, hinterfrage meine Annahmen und arbeite sie Schritt für Schritt durch. Diesen Prozess genieße ich wirklich, auch wenn er mal frustrierend wird."
+    }
+  }
+}

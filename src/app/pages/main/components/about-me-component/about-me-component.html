@@ -1,37 +1,24 @@
 <section class="about__me" id="about">
   <div class="portrait"><img src="/assets/img/placeholder.png" alt="placeholder" /></div>
   <div class="about__text">
-    <p class="about__text__title">Who I Am</p>
+    <p class="about__text__title">{{ 'about.title' | translate }}</p>
     <div class="about__detail">
-      <h3>About me</h3>
-      <p>
-        Hey there, I'm Mathias! Coding runs in my blood — there's something deeply satisfying about
-        turning a blank file into something that actually works. I'm constantly looking to sharpen
-        my skills, whether that's diving into new frameworks or solving tricky problems. My drive:
-        setting myself up for a strong future in tech and writing code that lasts
-      </p>
+      <h3>{{ 'about.heading' | translate }}</h3>
+      <p>{{ 'about.intro' | translate }}</p>
       <ul>
         <li>
           <img src="/assets/icons/location-icon.svg" alt="location-pin" />
           <p>
-            Based in Leipzig, Germany — but not tied to it. I'm fully open to remote work and
-            wouldn't rule out relocating for the right opportunity.
+            {{ 'about.items.location' | translate }}
           </p>
         </li>
         <li>
           <img src="/assets/icons/mind-set-icon.svg" alt="" />
-          <p>
-            I genuinely enjoy picking up new technologies — it keeps things exciting and ensures I'm
-            always moving forward. Staying current isn't a chore for me, it's part of the mindset.
-          </p>
+          <p>{{ 'about.items.mindset' | translate }}</p>
         </li>
         <li>
           <img src="/assets/icons/about-me-icon.svg" alt="" />
-          <p>
-            When I hit a problem, I don't let go until it's solved. I approach challenges
-            analytically — breaking them down, questioning my assumptions, and working through them
-            step by step. I genuinely enjoy that process, even when it gets frustrating.
-          </p>
+          <p>{{ 'about.items.problem' | translate }}</p>
         </li>
       </ul>
     </div>
