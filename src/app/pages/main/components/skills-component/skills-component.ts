@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { Skills } from './skills';
 import { Button } from '../../../../shared/button/button';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-skills-component',
-  imports: [Button],
+  imports: [Button, TranslatePipe],
   templateUrl: './skills-component.html',
   styleUrl: './skills-component.scss',
 })

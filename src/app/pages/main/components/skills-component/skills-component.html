@@ -1,17 +1,17 @@
 <section id="skills">
   <div class="skill__text">
-    <p class="skill__text__title">Technologies</p>
+    <p class="skill__text__title">{{ 'skills.title' | translate }}</p>
     <div class="skill__text__box">
-      <h3>Skill Set</h3>
+      <h3>{{ 'skills.heading' | translate }}</h3>
       <p>
-        I work with the core building blocks of the web — HTML, CSS, and JavaScript — and have
-        extended that foundation with TypeScript and SCSS. My current framework focus is Angular,
-        where I'm actively building real projects. Keeping up with the fast pace of web development
-        isn't a burden for me, it's what keeps the work exciting.
+        {{ 'skills.intro' | translate }}
       </p>
-      <h4>You need <span>another skill?</span></h4>
-      <p>Feel free to contact me. I look forward to expanding on my previous knowledge.</p>
-      <app-button label="Let's talk" href="#contact"></app-button>
+      <h4>
+        {{ 'skills.cta_heading' | translate }}
+        <span>{{ 'skills.cta_heading_span' | translate }}</span>
+      </h4>
+      <p>{{ 'skills.cta_text' | translate }}</p>
+      <app-button [label]="'skills.cta_btn' | translate" href="#contact"></app-button>
     </div>
   </div>
   <div class="skill__overview">
@@ -28,7 +28,7 @@
       >
         @if (skill.tooltip) {
           <div class="skill__tooltip">
-            <p>I have a special interest in learning</p>
+            <p>{{ 'skills.tooltip' | translate }}</p>
             <div class="skill__tooltip__wrapper">
               <div class="skill__tooltip__icon">
                 <img src="/assets/icons/react-logo.svg" alt="React" />

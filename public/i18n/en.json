@@ -24,5 +24,15 @@
       "mindset": "I genuinely enjoy picking up new technologies — it keeps things exciting and ensures I'm always moving forward. Staying current isn't a chore for me, it's part of the mindset.",
       "problem": " When I hit a problem, I don't let go until it's solved. I approach challenges analytically — breaking them down, questioning my assumptions, and working through them step by step. I genuinely enjoy that process, even when it gets frustrating."
     }
+  },
+  "skills": {
+    "title": "Technologies",
+    "heading": "Skill Set",
+    "intro": "I work with the core building blocks of the web — HTML, CSS, and JavaScript — and have extended that foundation with TypeScript and SCSS. My current framework focus is Angular, where I'm actively building real projects. Keeping up with the fast pace of web development isn't a burden for me, it's what keeps the work exciting.",
+    "cta_heading": "You need",
+    "cta_heading_span": "another skill?",
+    "cta_text": "Feel free to contact me. I look forward to expanding on my previous knowledge.",
+    "cta_btn": "Let's talk",
+    "tooltip": "I have a special interest in learning"
   }
 }

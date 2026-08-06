@@ -24,5 +24,15 @@
       "mindset": "Neue Technologien zu entdecken macht mir echten Spaß — es hält die Arbeit spannend und sorgt dafür, dass ich mich stetig weiterentwickle. Auf dem neuesten Stand zu bleiben ist für mich keine Pflicht, sondern Einstellung.",
       "problem": "Wenn ich auf ein Problem stoße, lasse ich nicht locker bis es gelöst ist. Ich gehe Herausforderungen analytisch an — zerlege sie in Teile, hinterfrage meine Annahmen und arbeite sie Schritt für Schritt durch. Diesen Prozess genieße ich wirklich, auch wenn er mal frustrierend wird."
     }
+  },
+  "skills": {
+    "title": "Technologien",
+    "heading": "Skill Set",
+    "intro": "Ich arbeite mit den Grundbausteinen des Webs — HTML, CSS und JavaScript — und habe dieses Fundament mit TypeScript und SCSS erweitert. Mein aktueller Framework-Fokus liegt auf Angular, wo ich aktiv echte Projekte baue. Mit dem schnellen Tempo der Webentwicklung mitzuhalten ist für mich keine Last, sondern das, was die Arbeit spannend macht",
+    "cta_heading": "Du brauchst",
+    "cta_heading_span": "einen anderen Skill?",
+    "cta_text": "Melde dich gern bei mir. Ich freue mich darauf, mein Wissen weiter auszubauen.",
+    "cta_btn": "Kontakt",
+    "tooltip": "Ich habe besonderes Interesse daran, zu lernen"
   }
 }
