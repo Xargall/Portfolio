@@ -52,7 +52,6 @@
     "live_test": "Live Test",
     "next": "Nächstes Projekt"
   },
-
   "references": {
     "heading": "Was meine Kollegen über mich sagen",
     "jobs": {
@@ -71,5 +70,30 @@
       "role": "Professioneller Zähler",
       "text": "Mathias hat so schnell geliefert, dass ich fast ein Erscheinungsdatum angekündigt hätte. Fast. Das machen wir hier nicht. Aber ich war versucht."
     }
+  },
+  "contact": {
+    "errors": {
+      "name_required": "Oops! Dein Name fehlt noch.",
+      "email_required": "Hoppla! Deine E-Mail wird benötigt.",
+      "email_invalid": "Bitte gib eine gültige E-Mail-Adresse ein.",
+      "message_required": "Was soll entwickelt werden?",
+      "privacy_required": "Bitte akzeptiere die Datenschutzerklärung."
+    },
+    "title": "Kontakt",
+    "heading": "Lass uns zusammenarbeiten",
+    "subheading": "Auf der Suche nach Verstärkung?",
+    "intro": "Ich bin ein motivierter Fullstack Developer, dem die Arbeit wirklich am Herzen liegt. Ich bringe einen scharfen Blick fürs Detail, schnelle Lernbereitschaft und den Antrieb, Dinge tatsächlich umzusetzen — nicht nur darüber zu reden. Wenn du jemanden suchst, der anpackt, mitdenkt und deinem Team echten Mehrwert bringt: Ich bin dein Mann.",
+    "cta_text": "Fullstack Entwickler gesucht?",
+    "cta_span": "Lass uns reden!",
+    "name_label": "Wie heißt du?",
+    "name_placeholder": "Dein Name...",
+    "email_label": "Wie lautet deine E-Mail?",
+    "email_placeholder": "deineemail@email.com",
+    "message_label": "Wie kann ich dir helfen?",
+    "message_placeholder": "Hallo Mathias, ich interessiere mich für...",
+    "privacy_text": "Ich habe die ",
+    "privacy_link": "Datenschutzerklärung",
+    "privacy_text2": "gelesen und stimme der Verarbeitung meiner Daten zu.",
+    "submit": "Sag Hallo ;)"
   }
 }

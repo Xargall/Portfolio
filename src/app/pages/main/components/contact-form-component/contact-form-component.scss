@@ -73,13 +73,19 @@
         padding: 32px;
         gap: 16px;
         border-top: 1px solid v.$secondary-color;
-        border-bottom: 1px solid v.$secondary-color;
+        border-bottom: 1px solid rgba(v.$secondary-color, 0.5);
+        transition: all 250ms ease-in-out;
 
         font-family: 'Fira Code';
         font-weight: 500;
         font-size: clamp(1.125rem, 1.018rem + 0.536vw, 1.5rem);
         line-height: 120%;
         color: v.$secondary-color;
+
+        &:hover {          
+          border-bottom: 1px solid rgba(v.$secondary-color, 1);
+          transition: all 250ms ease-in-out;
+        }
       }
 
       input {
@@ -115,14 +121,21 @@
         height: 131px;
         padding: 32px;
         gap: 16px;
-        border-top: 1px solid v.$secondary-color;
-        border-bottom: 1px solid v.$secondary-color;
+        border-top: 1px solid rgba(v.$secondary-color, 0.5);
+        border-bottom: 1px solid rgba(v.$secondary-color, 0.5);
+        transition: all 250ms ease-in-out;
 
         font-family: 'Fira Code';
         font-weight: 500;
         font-size: clamp(1.125rem, 1.018rem + 0.536vw, 1.5rem);
         line-height: 120%;
         color: v.$secondary-color;
+
+        &:hover {
+          border-top: 1px solid rgba(v.$secondary-color, 1);
+          border-bottom: 1px solid rgba(v.$secondary-color, 1);
+          transition: all 250ms ease-in-out;
+        }
 
         .email-tooltip {
           position: absolute;
@@ -165,14 +178,21 @@
         height: 131px;
         padding: 32px;
         gap: 16px;
-        border-top: 1px solid v.$secondary-color;
-        border-bottom: 1px solid v.$secondary-color;
+        border-top: 1px solid rgba(v.$secondary-color, 0.5);
+        border-bottom: 1px solid rgba(v.$secondary-color, 0.5);
+        transition: all 250ms ease-in-out;
 
         font-family: 'Fira Code';
         font-weight: 500;
         font-size: clamp(1.125rem, 1.018rem + 0.536vw, 1.5rem);
         line-height: 120%;
         color: v.$secondary-color;
+
+        &:hover {
+          border-top: 1px solid rgba(v.$secondary-color, 1);
+          border-bottom: 1px solid rgba(v.$secondary-color, 1);
+          transition: all 250ms ease-in-out;
+        }
       }
 
       input {

@@ -1,27 +1,24 @@
 <section class="contact" id="contact">
   <div class="contact__text">
-    <span>Contact me</span>
-    <h3>Let's work together</h3>
-    <h4>Got a problem to solve?</h4>
+    <span>{{ 'contact.title' | translate }}</span>
+    <h3>{{ 'contact.heading' | translate }}</h3>
+    <h4>{{ 'contact.subheading' | translate }}</h4>
+    <p>{{ 'contact.intro' | translate }}</p>
     <p>
-      I'm a motivated Fullstack Developer who genuinely cares about the work I do. I bring a sharp
-      eye for detail, a willingness to learn fast, and the drive to actually get things done — not
-      just talk about them. If you're looking for someone who shows up, thinks along, and adds real
-      value to your team: I'm your guy.
+      {{ 'contact.cta_text' | translate }} <span>{{ 'contact.cta_span' | translate }}</span>
     </p>
-    <p>Need a Fullstack developer? <span>Let's talk!</span></p>
   </div>
   <div class="contact__form">
     <div class="contact__form__name">
       <label>
-        What's your name?
+        {{ 'contact.name_label' | translate }}
         <input
           [formField]="contactForm.name"
           type="text"
           [placeholder]="
             contactForm.name().invalid() && contactForm.name().touched()
-              ? contactForm.name().errors()[0].message
-              : 'Your name goes here'
+              ? (contactForm.name().errors()[0].message | translate)
+              : ('contact.name_placeholder' | translate)
           "
           [class.invalid]="contactForm.name().invalid() && contactForm.name().touched()"
         />
@@ -30,7 +27,7 @@
     </div>
     <div class="contact__form__mail">
       <label>
-        What's your email?
+        {{ 'contact.email_label' | translate }}
         <input
           [formField]="contactForm.email"
           type="email"
@@ -38,8 +35,8 @@
             contactForm.email().value() === '' &&
             contactForm.email().invalid() &&
             contactForm.email().touched()
-              ? contactForm.email().errors()[0].message
-              : 'youremail@email.com'
+              ? (contactForm.email().errors()[0].message | translate)
+              : ('contact.email_placeholder' | translate)
           "
           [class.invalid]="contactForm.email().invalid() && contactForm.email().touched()"
         />
@@ -49,7 +46,7 @@
           contactForm.email().touched()
         ) {
           <div class="email-tooltip">
-            <span>{{ contactForm.email().errors()[0].message }}</span>
+            <span>{{ contactForm.email().errors()[0].message | translate }}</span>
           </div>
         }
       </label>
@@ -57,14 +54,14 @@
     </div>
     <div class="contact__form__message">
       <label>
-        How can i help you?
+        {{ 'contact.message_label' | translate }}
         <input
           [formField]="contactForm.message"
           type="text"
           [placeholder]="
             contactForm.message().invalid() && contactForm.message().touched()
-              ? contactForm.message().errors()[0].message
-              : 'Hello Mathias, I am interested in... '
+              ? (contactForm.message().errors()[0].message | translate)
+              : ('contact.message_placeholder' | translate)
           "
           [class.invalid]="contactForm.message().invalid() && contactForm.message().touched()"
         />
@@ -87,8 +84,9 @@
           </svg>
         </label>
         <span class="privacy-checkbox__text">
-          I've read the <a href="">privacy policy</a> and agree to the processing of my data as
-          outlined.
+          {{ 'contact.privacy_text' | translate }}
+          <a href="">{{ 'contact.privacy_link' | translate }}</a>
+          {{ 'contact.privacy_text2' | translate }}
         </span>
       </div>
 
@@ -99,10 +97,14 @@
             contactForm.privacyAccepted().invalid() && contactForm.privacyAccepted().touched()
           "
         >
-          Please accept the privacy policy.
+          {{ 'contact.errors.privacy_required' | translate }}
         </span>
       </div>
     </div>
-    <app-button type="submit" [disabled]="contactForm().invalid()" label="Say Hello ;)"></app-button>
+    <app-button
+      type="submit"
+      [disabled]="contactForm().invalid()"
+      [label]="'contact.submit' | translate"
+    ></app-button>
   </div>
 </section>

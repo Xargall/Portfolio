@@ -71,5 +71,30 @@
       "role": "Professional Counter",
       "text": "Mathias delivered so fast I almost announced a release date. Almost. We do not do that here. But I was tempted."
     }
+  },
+  "contact": {
+    "errors": {
+      "name_required": "Oops! It seems your name is missing",
+      "email_required": "Hoppla! Your email is required",
+      "email_invalid": "Please enter a valid email address",
+      "message_required": "What do you need to develop?",
+      "privacy_required": "Please accept the privacy policy."
+    },
+    "title": "Contact me",
+    "heading": "Let's work together",
+    "subheading": "Got a problem to solve?",
+    "intro": "I'm a motivated Fullstack Developer who genuinely cares about the work I do. I bring a sharp eye for detail, a willingness to learn fast, and the drive to actually get things done — not just talk about them. If you're looking for someone who shows up, thinks along, and adds real value to your team: I'm your guy.",
+    "cta_text": "Need a Fullstack developer?",
+    "cta_span": "Let's talk!",
+    "name_label": "What's your name?",
+    "name_placeholder": "Your name goes here",
+    "email_label": "What's your email?",
+    "email_placeholder": "youremail@email.com",
+    "message_label": "How can I help you?",
+    "message_placeholder": "Hello Mathias, I am interested in...",
+    "privacy_text": "I've read the",
+    "privacy_link": "privacy policy",
+    "privacy_text2": "and agree to the processing of my data as outlined.",
+    "submit": "Say Hello ;)"
   }
 }
