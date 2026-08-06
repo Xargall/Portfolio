@@ -52,5 +52,24 @@
     "github": "GitHub",
     "live_test": "Live Test",
     "next": "Next Project"
+  },
+  "references": {
+    "heading": "What my colleagues say about me",
+    "jobs": {
+      "role": "Fruit Salesman",
+      "text": "I asked Mathias to think different. He did. Then he made it look good AND work. I would have fired everyone else."
+    },
+    "gates": {
+      "role": "Professional Window Cleaner",
+      "text": "Mathias wrote cleaner code in one afternoon than my entire team managed in a decade. Also he never crashed once."
+    },
+    "zuckerberg": {
+      "role": "Definitely a Human Person",
+      "text": "Mathias is a great developer. I have analyzed 4.2 billion data points to confirm this. I feel emotions about it."
+    },
+    "newell": {
+      "role": "Professional Counter",
+      "text": "Mathias delivered so fast I almost announced a release date. Almost. We do not do that here. But I was tempted."
+    }
   }
 }

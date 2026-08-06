@@ -1,9 +1,10 @@
 import { Component, computed, signal } from '@angular/core';
 import { ReferenceModel } from './reference.model';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-references-component',
-  imports: [],
+  imports: [TranslatePipe],
   templateUrl: './references-component.html',
   styleUrl: './references-component.scss',
 })
@@ -13,27 +14,23 @@ export class ReferencesComponent {
   references: ReferenceModel[] = [
     {
       name: 'S.Jobs',
-      role: 'Fruit Salesman',
-      reference:
-        'I asked Mathias to think different. He did. Then he made it look good AND work. I would have fired everyone else.',
+      role: 'references.jobs.role',
+      reference: 'references.jobs.text',
     },
     {
       name: 'B.Gates',
-      role: 'Professional Window Cleaner',
-      reference:
-        'Mathias wrote cleaner code in one afternoon than my entire team managed in a decade. Also he never crashed once.',
+      role: 'references.gates.role',
+      reference: 'references.gates.text',
     },
     {
       name: 'M.Zuckerberg',
-      role: 'Definitely a Human Person',
-      reference:
-        'Mathias is a great developer. I have analyzed 4.2 billion data points to confirm this. I feel emotions about it.',
+      role: 'references.zuckerberg.role',
+      reference: 'references.zuckerberg.text',
     },
     {
       name: 'G.Newell',
-      role: 'Professional Counter',
-      reference:
-        'Mathias delivered so fast I almost announced a release date. Almost. We do not do that here. But I was tempted.',
+      role: 'references.newell.role',
+      reference: 'references.newell.text',
     },
   ];
 
