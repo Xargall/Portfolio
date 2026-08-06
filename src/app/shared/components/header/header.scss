@@ -108,6 +108,19 @@ nav {
   button {
     background: none;
     border: none;
+    cursor: pointer;
+
+    svg {
+      transition: fill 150ms ease-in-out;
+      fill: white;
+    }
+
+    &:hover{
+    svg {
+      fill: v.$secondary-color;
+    }
+    }
+
   }
 }
 
