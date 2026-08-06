@@ -3,10 +3,11 @@ import { FormField, email, form, required, submit } from '@angular/forms/signals
 import { ContactFormModel } from './contact-form.model';
 import { Button } from '../../../../shared/button/button';
 import { TranslatePipe } from '@ngx-translate/core';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contact-form-component',
-  imports: [FormField, Button, TranslatePipe],
+  imports: [FormField, Button, TranslatePipe, RouterLink],
   templateUrl: './contact-form-component.html',
   styleUrl: './contact-form-component.scss',
 })

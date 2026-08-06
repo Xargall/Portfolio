@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { LanguageService } from '../../shared/services/language.service';
 
 @Component({
   selector: 'app-privacy-policy',
@@ -6,4 +7,6 @@ import { Component } from '@angular/core';
   templateUrl: './privacy-policy.html',
   styleUrl: './privacy-policy.scss',
 })
-export class PrivacyPolicy {}
+export class PrivacyPolicy {
+  langService = inject(LanguageService);
+}

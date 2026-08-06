@@ -1,6 +1,7 @@
 import { Component, signal, inject } from '@angular/core';
 import { Logo } from '../../logo/logo';
 import { TranslateService, TranslatePipe } from '@ngx-translate/core';
+import { LanguageService } from '../../services/language.service';
 
 @Component({
   selector: 'app-header',
@@ -9,15 +10,9 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core';
   styleUrl: './header.scss',
 })
 export class Header {
-  private translate = inject(TranslateService);
-  currentLang = signal<'en' | 'de'>('en');
+  langService = inject(LanguageService);
   activeLink: string = '';
   isMenuOpen = signal(false);
-
-  changeLanguage(lang: 'en' | 'de') {
-    this.currentLang.set(lang);
-    this.translate.use(lang);
-  }
 
   setActive(link: string) {
     this.activeLink = link;

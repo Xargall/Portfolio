@@ -1,10 +1,10 @@
 <header id="home">
   <nav [class.open]="isMenuOpen()">
-    <div class="switch" [class.de]="currentLang() === 'de'">
+    <div class="switch" [class.de]="langService.currentLang() === 'de'">
       <div class="slider"></div>
 
-      <button (click)="changeLanguage('en')">EN</button>
-      <button (click)="changeLanguage('de')">DE</button>
+      <button (click)="langService.changeLanguage('en')">EN</button>
+      <button (click)="langService.changeLanguage('de')">DE</button>
     </div>
     <a href="#about" [class.active]="activeLink === 'about'" (click)="setActive('about')">{{
       'nav.about' | translate
