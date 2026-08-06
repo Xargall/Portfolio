@@ -18,11 +18,11 @@
       <div class="line"></div>
     </div>
     <div class="hero__title">
-      <span>Fullstack Developer</span>
+      <span>{{ 'hero.subtitle' | translate}}</span>
       <h1>Mathias Mayer</h1>
       <div class="hero__btn">
-        <app-button label="Check my work" href="#projects"></app-button>
-        <app-button label="Contact me" href="#contact"></app-button>
+        <app-button [label]="'hero.cta_work' | translate" href="#projects"></app-button>
+        <app-button [label]="'hero.cta_contact' | translate" href="#contact"></app-button>
       </div>
     </div>
     <div class="hero__link">
@@ -83,7 +83,7 @@
   <div class="hero__marquee">
     <div class="marquee__track">
       @for (item of doubled; track $index) {
-        <span>{{ item }}</span>
+        <span>{{ item | translate }}</span>
         <span>•</span>
       }
     </div>
