@@ -4,8 +4,8 @@
       <span class="project__dialog__index">{{ selectedIndex() | number: '2.0-0' }}</span>
       <h3 class="project__dialog__title">{{ selectedProject()?.name }}</h3>
       <div class="project__dialog__text-block">
-        <h4 class="project__dialog__subtitle">What is this Project about?</h4>
-        <p class="project__dialog__description">{{ selectedProject()?.description }}</p>
+        <h4 class="project__dialog__subtitle">{{ 'dialog.subtitle' | translate }}</h4>
+        <p class="project__dialog__description">{{ selectedProject()?.description | translate }}</p>
         <ul class="techs">
           @for (tech of selectedProject()?.techs; track tech) {
             <li>
@@ -45,7 +45,7 @@
       <img [src]="selectedProject()?.img" alt="" />
       @if (selectedIndex() < totalProjects()) {
         <a (click)="nextProject.emit()"
-          >Next Project
+          >{{ 'dialog.next' | translate }}
           <svg
             width="19"
             height="19"

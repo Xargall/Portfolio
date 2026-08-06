@@ -1,9 +1,8 @@
 <section class="project__section" id="projects">
-  <span>Portfolio</span>
-  <h3>Featured Projects</h3>
+  <span>{{'projects.title' | translate}}</span>
+  <h3>{{'projects.heading' | translate}}</h3>
   <p>
-    Explore a selection of my work here - Interact with <br />
-    projects to see my skills in action.
+    {{'projects.intro' | translate}}
   </p>
   <div class="project">
     @for (project of projects; track project; let i = $index) {

@@ -6,7 +6,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 72px 96px 80px;
+  padding: 72px clamp(48px, -192px + 20vw, 96px) 80px;
   background: v.$primary-color;
   @include m.content-width;
 
@@ -51,7 +51,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
-    max-width: 880px;
+    max-width: 800px;
     height: 110px;
     padding: 0 32px;
     border-bottom: 1px solid v.$secondary-color;
@@ -121,7 +121,7 @@
     height: 192px;
     border-radius: 16px;
     position: absolute;
-    left: 107%;
+    left: 103%;
 
     &__bg {
       position: relative;
@@ -183,9 +183,21 @@
 }
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  .project__section {
+    padding: 72px clamp(16px, -80px + 12.5vw, 48px) 80px;
+  }
+
   .project__preview {
     display: none;
   }
+}
 
-  
+@media screen and (min-width: 1025px) and (max-width: 1200px) {
+  .project__section {
+    padding: 72px 48px 80px;
+  }
+
+  .project__preview {
+    display: none;
+  }
 }

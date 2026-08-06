@@ -2,10 +2,11 @@ import { Component, input, output, viewChild, effect, ElementRef } from '@angula
 import { Button } from '../../../../../shared/button/button';
 import { ProjectModel } from '../project.model';
 import { DecimalPipe } from '@angular/common';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-dialog',
-  imports: [Button, DecimalPipe],
+  imports: [Button, DecimalPipe, TranslatePipe],
   templateUrl: './dialog.html',
   styleUrl: './dialog.scss',
 })

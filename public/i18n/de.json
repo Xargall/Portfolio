@@ -34,5 +34,22 @@
     "cta_text": "Melde dich gern bei mir. Ich freue mich darauf, mein Wissen weiter auszubauen.",
     "cta_btn": "Kontakt",
     "tooltip": "Ich habe besonderes Interesse daran, zu lernen"
+  },
+  "projects": {
+    "title": "Portfolio",
+    "heading": "Ausgewählte Projects",
+    "intro": "Entdecke hier eine Auswahl meiner Arbeiten — interagiere mit den Projekten und sieh meine Skills in Aktion.",
+    "pokedex": {
+      "description": "Gotta catch 'em all — oder zumindest nachschlagen. Dieser Pokédex lädt Live-Daten von der PokéAPI und lässt dich jeden Pokémon suchen, filtern und in detaillierten Karten erkunden."
+    },
+    "el_pollo_loco": {
+      "description": "Rennen, springen, werfen — El Pollo Loco war mein erster Einstieg in objektorientiertes JavaScript. Hilf Pepe, Münzen und Salsaflaschen zu sammeln, um das verrückte Huhn zu besiegen."
+    }
+  },
+  "dialog": {
+    "subtitle": "Worum geht es in diesem Projekt?",
+    "github": "GitHub",
+    "live_test": "Live Test",
+    "next": "Nächstes Projekt"
   }
 }
