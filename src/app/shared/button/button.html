@@ -1,5 +1,5 @@
 @if (type() === 'link') {
-  <a [href]="href()">
+  <a [href]="href()" [target]="target()">
     @if (showIcon()) {
       {{ label() }}
     } @else {

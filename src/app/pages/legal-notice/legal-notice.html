@@ -1,1 +1,43 @@
-<p>legal-notice works!</p>
+@if (langService.currentLang() === 'de') {
+  <div class="legal-notice">
+    <h1>Rechtlicher Hinweis</h1>
+    <h2>Impressum</h2>
+    <p>
+      Mathias Mayer<br />
+      Martinshöhe 24A<br />
+      04158 Leipzig
+    </p>
+    <h2>Kontakt</h2>
+    <p>
+      Telefon: 01722792516<br />
+      E-Mail: mayer.mathias@proton.me
+    </p>
+    <p>
+      Quelle:
+      <a href="https://www.e-recht24.de" target="_blank" rel="noopener noreferrer"
+        >https://www.e-recht24.de</a
+      >
+    </p>
+  </div>
+} @else {
+  <div class="legal-notice">
+    <h1>Legal Notice</h1>
+    <h2>Imprint</h2>
+    <p>
+      Mathias Mayer<br />
+      Martinshöhe 24A<br />
+      04158 Leipzig
+    </p>
+    <h2>Contact</h2>
+    <p>
+      Phone: 01722792516<br />
+      Email: mayer.mathias@proton.me
+    </p>
+    <p>
+      Source:
+      <a href="https://www.e-recht24.de" target="_blank" rel="noopener noreferrer"
+        >https://www.e-recht24.de</a
+      >
+    </p>
+  </div>
+}

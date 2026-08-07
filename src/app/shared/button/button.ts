@@ -12,4 +12,5 @@ export class Button {
   showIcon = input<boolean>(false);
   disabled = input<boolean>(false);
   type = input<'link' | 'submit'>('link');
+  target = input<string>('_self');
 }

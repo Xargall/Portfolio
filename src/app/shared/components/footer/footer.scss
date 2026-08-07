@@ -10,6 +10,9 @@ footer {
 
   @include m.space-between;
   @include m.content-width;
+  &.transparent {
+    background: transparent;
+  }
 }
 
 .initials {

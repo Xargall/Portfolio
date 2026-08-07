@@ -12,7 +12,7 @@
       "remote": "Verfügbar für Mobiles Arbeiten",
       "role": "Fullstack Entwickler",
       "location": "Aus Leipzig",
-      "open": "Arbeitssuchend"
+      "open": "Arbeitsuchend"
     }
   },
   "about": {
@@ -20,15 +20,15 @@
     "heading": "Über mich",
     "intro": "Hey, ich bin Mathias! Coding liegt mir im Blut — es gibt kaum etwas Befriedigenderes, als aus einer leeren Datei etwas zum Leben zu erwecken. Ich schärfe meine Skills kontinuierlich, ob durch neue Frameworks oder knifflige Probleme. Mein Antrieb: eine starke Zukunft in der Tech-Welt und Code, der bleibt.",
     "items": {
-      "location": "In Leipzig zuhause — aber nicht gebunden. Remote-Arbeit ist für mich selbstverständlich, und für die richtige Möglichkeit würde ich auch einen Umzug nicht ausschließen.",
-      "mindset": "Neue Technologien zu entdecken macht mir echten Spaß — es hält die Arbeit spannend und sorgt dafür, dass ich mich stetig weiterentwickle. Auf dem neuesten Stand zu bleiben ist für mich keine Pflicht, sondern Einstellung.",
-      "problem": "Wenn ich auf ein Problem stoße, lasse ich nicht locker bis es gelöst ist. Ich gehe Herausforderungen analytisch an — zerlege sie in Teile, hinterfrage meine Annahmen und arbeite sie Schritt für Schritt durch. Diesen Prozess genieße ich wirklich, auch wenn er mal frustrierend wird."
+      "location": "In Leipzig zuhause — aber nicht gebunden. Offen für vollständige Remote-Arbeit, und bei der richtigen Stelle ist ein Umzug kein Thema.",
+      "mindset": "Neue Technologien zu entdecken macht mir großen Spaß — es hält die Arbeit spannend und sorgt dafür, dass ich mich stetig weiterentwickle. Auf dem neuesten Stand zu bleiben ist für mich keine Pflicht, sondern Einstellung.",
+      "problem": "Wenn ich auf ein Problem stoße, lasse ich nicht locker bis es gelöst ist. Ich gehe Herausforderungen analytisch an — zerlege sie in Teile, hinterfrage meine Annahmen und arbeite sie Schritt für Schritt durch. Diesen Prozess mag ich — auch wenn er manchmal frustriert."
     }
   },
   "skills": {
     "title": "Technologien",
     "heading": "Skill Set",
-    "intro": "Ich arbeite mit den Grundbausteinen des Webs — HTML, CSS und JavaScript — und habe dieses Fundament mit TypeScript und SCSS erweitert. Mein aktueller Framework-Fokus liegt auf Angular, wo ich aktiv echte Projekte baue. Mit dem schnellen Tempo der Webentwicklung mitzuhalten ist für mich keine Last, sondern das, was die Arbeit spannend macht",
+    "intro": "Ich arbeite mit den Grundbausteinen des Webs — HTML, CSS und JavaScript — und habe dieses Fundament mit TypeScript und SCSS erweitert. Mein aktueller Framework-Fokus liegt auf Angular, wo ich aktiv echte Projekte baue. Mit dem schnellen Tempo der Webentwicklung mitzuhalten ist für mich keine Last, sondern das, was die Arbeit spannend macht.",
     "cta_heading": "Du brauchst",
     "cta_heading_span": "einen anderen Skill?",
     "cta_text": "Melde dich gern bei mir. Ich freue mich darauf, mein Wissen weiter auszubauen.",
@@ -37,10 +37,10 @@
   },
   "projects": {
     "title": "Portfolio",
-    "heading": "Ausgewählte Projects",
-    "intro": "Entdecke hier eine Auswahl meiner Arbeiten — interagiere mit den Projekten und sieh meine Skills in Aktion.",
+    "heading": "Ausgewählte Projekte",
+    "intro": "Entdecke hier eine Auswahl meiner Arbeiten — interagiere mit den Projekten und schau dir meine Fähigkeiten in Aktion an.",
     "pokedex": {
-      "description": "Gotta catch 'em all — oder zumindest nachschlagen. Dieser Pokédex lädt Live-Daten von der PokéAPI und lässt dich jeden Pokémon suchen, filtern und in detaillierten Karten erkunden."
+      "description": "Gotta catch 'em all — dieser Pokédex holt Live-Daten von der PokéAPI und lässt dich jedes Pokémon suchen, filtern und in detaillierten Karten suchen, filtern und bis ins Detail anschauen."
     },
     "el_pollo_loco": {
       "description": "Rennen, springen, werfen — El Pollo Loco war mein erster Einstieg in objektorientiertes JavaScript. Hilf Pepe, Münzen und Salsaflaschen zu sammeln, um das verrückte Huhn zu besiegen."
@@ -82,7 +82,7 @@
     "title": "Kontakt",
     "heading": "Lass uns zusammenarbeiten",
     "subheading": "Auf der Suche nach Verstärkung?",
-    "intro": "Ich bin ein motivierter Fullstack Developer, dem die Arbeit wirklich am Herzen liegt. Ich bringe einen scharfen Blick fürs Detail, schnelle Lernbereitschaft und den Antrieb, Dinge tatsächlich umzusetzen — nicht nur darüber zu reden. Wenn du jemanden suchst, der anpackt, mitdenkt und deinem Team echten Mehrwert bringt: Ich bin dein Mann.",
+    "intro": "Ich bin ein motivierter Fullstack Entwickler, dem die Arbeit wirklich am Herzen liegt. Ich bringe einen scharfen Blick fürs Detail, schnelle Lernbereitschaft und den Antrieb, Dinge tatsächlich umzusetzen — nicht nur darüber zu reden. Wenn du Jemanden suchst, der anpackt, mitdenkt und deinem Team echten Mehrwert bringt: Ich bin dein Mann.",
     "cta_text": "Fullstack Entwickler gesucht?",
     "cta_span": "Lass uns reden!",
     "name_label": "Wie heißt du?",

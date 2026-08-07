@@ -8,8 +8,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 35px 96px;
+  padding: 35px clamp(16px, 2.381vw + 2.667px, 96px);
   @include m.content-width;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0) 13.56%, rgba(0, 0, 0, 0.6) 84.01%);
 }
 
 .initials {
@@ -115,12 +116,11 @@ nav {
       fill: white;
     }
 
-    &:hover{
-    svg {
-      fill: v.$secondary-color;
+    &:hover {
+      svg {
+        fill: v.$secondary-color;
+      }
     }
-    }
-
   }
 }
 
@@ -138,7 +138,7 @@ nav {
     position: absolute;
     width: 239px;
     height: 252px;
-    padding: 40px 77px;
+    padding: 40px 75px;
     gap: 24px;
     display: flex;
     flex-direction: column;
