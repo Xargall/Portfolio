@@ -1,6 +1,6 @@
 <section class="reference">
   <h3 class="reference__title">{{ 'references.heading' | translate }}</h3>
-  <div class="reference__slider">
+  <div class="reference__slider" [style.--card-gap]="'clamp(8px, -10.286px + 5.714vw, 72px)'">
     <span class="reference__quote">
       <svg
         width="90"
@@ -24,13 +24,7 @@
         [class.right]="getCardOffset($index) === 1"
         [class.far-left]="getCardOffset($index) < -1"
         [class.far-right]="getCardOffset($index) > 1"
-        [style.transform]="
-          'translateX(calc(' +
-          getCardOffset($index) * 100 +
-          '% + ' +
-          getCardOffset($index) * 72 +
-          'px))'
-        "
+        [style.transform]="getCardTransform($index)"
       >
         <p>{{ reference.reference | translate }}</p>
         <div class="reference__card__person">

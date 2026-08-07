@@ -39,7 +39,7 @@ section {
     h3 {
       font-family: 'Fira Code';
       font-weight: 700;
-      font-size: clamp(2.5rem, 2.071rem + 2.143vw, 4rem);
+      font-size: clamp(3.167rem, 2.921rem + 0.952vw, 4rem);
       line-height: 100%;
       letter-spacing: -3%;
       color: v.$secondary-color;
@@ -204,20 +204,25 @@ section {
   .skill__text {
     &__box {
       padding: 24px 30px;
+      gap: 24px;
+
+      h3 {
+        text-align: center;
+      }
     }
   }
 
   .skill__overview {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 16px;
+    gap: 32px 16px;
     align-items: center;
     justify-items: center;
   }
 
   .skill__item {
     img {
-      width: 50px;
+      width: 56px;
       height: 56px;
     }
 
@@ -268,4 +273,3 @@ section {
     gap: 20px;
   }
 }
-

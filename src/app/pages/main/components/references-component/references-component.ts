@@ -69,4 +69,9 @@ export class ReferencesComponent {
 
     return diff;
   }
+
+  getCardTransform(index: number): string {
+    const offset = this.getCardOffset(index);
+    return `translateX(calc(${offset * 100}% + ${offset} * var(--card-gap)))`;
+  }
 }
