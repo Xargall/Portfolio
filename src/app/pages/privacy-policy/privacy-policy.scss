@@ -1,51 +1,45 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
 .privacy-policy {
   max-width: 800px;
   margin: 0 auto;
-  padding: clamp(40px, 5vw, 80px) clamp(16px, 5vw, 48px);
+  padding: calc(clamp(40px, 5vw, 80px) + 100px) clamp(16px, 5vw, 48px) 0;
+
+  @media (max-width: 767px) {
+    padding-top: calc(clamp(40px, 5vw, 80px) + 50px);
+  }
 
   h1 {
-    font-size: clamp(2rem, 1.5rem + 2.5vw, 3rem);
+    @include m.font-fira(700, clamp(2rem, 1.5rem + 2.5vw, 3rem));
     color: v.$secondary-color;
-    font-family: 'Fira Code';
-    font-weight: 700;
     margin-bottom: 40px;
   }
 
   h2 {
-    font-size: clamp(1.5rem, 1.2rem + 1.5vw, 2rem);
+    @include m.font-fira(700, clamp(1.5rem, 1.2rem + 1.5vw, 2rem));
     color: v.$secondary-color;
-    font-family: 'Fira Code';
-    font-weight: 700;
     margin-top: 48px;
     margin-bottom: 24px;
   }
 
   h3 {
-    font-size: clamp(1.125rem, 1rem + 0.625vw, 1.5rem);
+    @include m.font-fira(700, clamp(1.125rem, 1rem + 0.625vw, 1.5rem));
     color: v.$secondary-color;
-    font-family: 'Fira Code';
-    font-weight: 700;
     margin-top: 32px;
     margin-bottom: 16px;
   }
 
   h4 {
-    font-size: clamp(1rem, 0.9rem + 0.5vw, 1.25rem);
+    @include m.font-fira(700, clamp(1rem, 0.9rem + 0.5vw, 1.25rem));
     color: v.$secondary-color;
-    font-family: 'Fira Code';
-    font-weight: 700;
     margin-top: 24px;
     margin-bottom: 12px;
   }
 
   p {
-    font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
+    @include m.font-karla(400, clamp(0.875rem, 0.8rem + 0.375vw, 1rem), 1.7);
     color: white;
-    font-family: 'Kira';
-    font-weight: 400;
-    line-height: 1.7;
     margin-bottom: 16px;
   }
 
@@ -53,8 +47,7 @@
     padding-left: 24px;
     margin-bottom: 16px;
     color: white;
-    font-family: 'Kira';
-    font-weight: 400;
+    @include m.font-karla(400);
 
     li {
       font-size: clamp(0.875rem, 0.8rem + 0.375vw, 1rem);
@@ -65,8 +58,7 @@
 
   a {
     color: v.$secondary-color;
-    font-family: 'Kira';
-    font-weight: 400;
+    @include m.font-karla(400);
     word-break: break-all;
   }
 

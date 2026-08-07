@@ -1,34 +1,32 @@
-@use '../../../styles/variables' as v;
+@use 'variables' as v;
+@use 'mixins' as m;
 
 .legal-notice {
   max-width: 880px;
   margin: 0 auto;
-  padding: clamp(40px, 5vw, 80px) clamp(16px, 5vw, 48px);
+  padding: calc(clamp(40px, 5vw, 80px) + 100px) clamp(16px, 5vw, 48px) 0;
+
+  @media (max-width: 767px) {
+    padding-top: calc(clamp(40px, 5vw, 80px) + 50px);
+    padding-bottom: 0;
+  }
 
   h1 {
-    font-size: clamp(1.5rem, 0.786rem + 3.571vw, 4rem);
-    font-family: 'Fira Code';
-    font-weight: 700;
+    @include m.font-fira(700, clamp(1.5rem, 0.786rem + 3.571vw, 4rem));
     color: v.$secondary-color;
     margin-bottom: 40px;
   }
 
   h2 {
-    font-size: clamp(19px, 24.486px - 0.381vw, 23px);
-    font-family: 'Karla';
-    font-weight: 700;
+    @include m.font-karla(700, clamp(19px, 24.486px - 0.381vw, 23px));
     color: white;
     margin-top: 48px;
     margin-bottom: 24px;
   }
 
   p {
-    font-size: 1rem;
-    font-family:'Karla';
-    font-weight: 400;
+    @include m.font-karla(400, 1rem, 1.7);
     color: v.$secondary-color;
-
-    line-height: 1.7;
     margin-bottom: 16px;
   }
 

@@ -7,13 +7,11 @@
   align-items: center;
   width: 100%;
   background: v.$primary-color;
-  padding: 72px 96px;
+  padding: v.$section-padding-y v.$section-padding-x;
   @include m.content-width;
 
   &__title {
-    font-family: 'Fira Code';
-    font-weight: 700;
-    font-size: clamp(1.25rem, 0.714rem + 1.429vw, 2rem);
+    @include m.font-fira(700, clamp(1.25rem, 0.714rem + 1.429vw, 2rem));
     color: v.$secondary-color;
     margin-bottom: 48px;
   }
@@ -32,6 +30,7 @@
   }
 
   &__slider {
+    --card-gap: clamp(8px, -10.286px + 5.714vw, 72px);
     height: 300px;
     width: calc(100% + 192px);
     position: relative;
@@ -81,7 +80,6 @@
       opacity 500ms ease-in-out,
       scale 500ms ease-in-out,
       background 500ms ease-in-out;
-
     z-index: -1;
 
     &.active {
@@ -105,10 +103,7 @@
     }
 
     p {
-      font-family: 'Karla';
-      font-weight: 400;
-      font-size: clamp(1rem, 0.821rem + 0.476vw, 1.25rem);
-      line-height: 120%;
+      @include m.font-karla(400, clamp(1rem, 0.821rem + 0.476vw, 1.25rem), 120%);
       color: white;
     }
 
@@ -122,12 +117,9 @@
         border: none;
         border-top: 1px solid white;
       }
-      p {
-        font-family: 'Karla';
-        font-weight: 400;
 
-        font-size: clamp(1rem, 0.911rem + 0.238vw, 1.125rem);
-        line-height: 120%;
+      p {
+        @include m.font-karla(400, clamp(1rem, 0.911rem + 0.238vw, 1.125rem), 120%);
         color: white;
       }
     }
@@ -160,7 +152,7 @@
 
 @media screen and (max-width: 767px) {
   .reference {
-    padding: 50px 0;
+    padding: v.$section-padding-y-mobile 0;
 
     &__title {
       text-align: center;
@@ -199,6 +191,6 @@
 
 @media screen and (min-width: 512px) and (max-width: 767px) {
   .reference__quote {
-    left: calc(50% - 240px);
+    left: calc(50% - 220px);
   }
 }

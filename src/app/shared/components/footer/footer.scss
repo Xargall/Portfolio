@@ -3,13 +3,12 @@
 
 footer {
   width: 100%;
-
   background-color: v.$primary-color;
-  padding: 72px 96px 64px;
+  padding: v.$section-padding-y v.$section-padding-x 64px;
   margin-top: auto;
-
   @include m.space-between;
   @include m.content-width;
+
   &.transparent {
     background: transparent;
   }
@@ -32,21 +31,15 @@ footer {
   gap: 8px;
 
   p {
+    @include m.font-karla(400, 1rem, 120%);
     color: white;
-    font-family: 'Karla';
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 120%;
   }
 }
 
 .copyright {
   p {
+    @include m.font-fira(400, 1.125rem, 120%);
     color: v.$secondary-color;
-    font-family: 'Fira Code';
-    font-weight: 400;
-    font-size: 1.125rem;
-    line-height: 120%;
   }
 }
 
@@ -55,10 +48,7 @@ footer {
   gap: 8px;
 
   a {
-    font-family: 'Karla';
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 120%;
+    @include m.font-karla(400, 1rem, 120%);
   }
 }
 
@@ -66,7 +56,7 @@ ul {
   list-style: none;
 
   li a {
-    transition: all 250ms ease-in-out;
+    transition: all v.$transition-default;
   }
 
   li::before {
@@ -74,14 +64,14 @@ ul {
     color: v.$secondary-color;
     margin-right: 0.5rem;
     opacity: 0;
-    transition: opacity 250ms;
+    transition: opacity v.$transition-default;
   }
-  li:hover:before {
+
+  li:hover::before {
     opacity: 1;
   }
 
   li:hover a {
-    transition: all 250ms ease-in-out;
     color: v.$secondary-color;
   }
 }
@@ -93,7 +83,7 @@ ul {
     align-items: start;
     row-gap: 32px;
     column-gap: 10px;
-    padding: 50px 16px 32px;
+    padding: v.$section-padding-y-mobile v.$section-padding-x-mobile 32px;
   }
 
   .person {

@@ -5,7 +5,7 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  padding: 72px 96px;
+  padding: v.$section-padding-y v.$section-padding-x;
   gap: 64px;
   background: v.$primary-color;
   @include m.content-width;
@@ -17,36 +17,26 @@
     height: auto;
 
     span {
-      font-family: 'Karla';
-      font-weight: 500;
-      font-size: clamp(1rem, 0.643rem + 0.952vw, 1.5rem);
+      @include m.text-label;
       color: v.$secondary-color;
       margin-bottom: 20px;
     }
 
     h3 {
-      font-family: 'Fira Code';
-      font-weight: 700;
-      font-size: clamp(3rem, 2.714rem + 1.429vw, 4rem);
-      line-height: 100%;
-      letter-spacing: -3%;
+      @include m.heading-xl;
       color: v.$secondary-color;
       margin-bottom: 40px;
       hyphens: auto;
     }
 
     h4 {
-      font-family: 'Fira Code';
-      font-weight: 700;
-      font-size: clamp(1.125rem, 1.018rem + 0.536vw, 1.5rem);
+      @include m.heading-md;
       color: v.$secondary-color;
       margin-bottom: 16px;
     }
 
     p {
-      font-family: 'Karla';
-      font-weight: 400;
-      font-size: 1rem;
+      @include m.font-karla(400, 1rem, 120%);
       color: white;
       margin-bottom: 20px;
 
@@ -67,90 +57,32 @@
 
     &__name {
       width: 100%;
-      label {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 131px;
-        padding: 32px;
-        gap: 16px;
-        border-top: 1px solid v.$secondary-color;
-        border-bottom: 1px solid rgba(v.$secondary-color, 0.5);
-        transition: all 250ms ease-in-out;
 
-        font-family: 'Fira Code';
-        font-weight: 500;
-        font-size: clamp(1.125rem, 1.018rem + 0.536vw, 1.5rem);
-        line-height: 120%;
-        color: v.$secondary-color;
+      label {
+        @include m.form-label;
+        border-top: 1px solid v.$secondary-color;
 
         &:hover {
-          border-bottom: 1px solid rgba(v.$secondary-color, 1);
-          transition: all 250ms ease-in-out;
+          border-bottom-color: v.$secondary-color;
         }
       }
 
       input {
-        width: 100%;
-        max-width: 616px;
-        background: transparent;
-        border: none;
-        font-family: 'Karla';
-        font-weight: 400;
-        font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
-        color: white;
-        border-bottom: 1px solid transparent;
-
-        &:focus {
-          outline: none;
-          border-bottom-color: v.$secondary-color;
-        }
-
-        &::placeholder {
-          font-family: 'Karla';
-          font-weight: 400;
-          font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
-          color: rgba(white, 0.8);
-        }
-
-        &.invalid::placeholder {
-          color: rgba(#ec7b7bcc, 0.8);
-        }
-      }
-    }
-    &__name,
-    &__mail,
-    &__message {
-      label {
-        height: auto; // statt 131px
-        min-height: 131px;
+        @include m.form-input;
       }
     }
 
     &__mail {
       width: 100%;
-      label {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 131px;
-        padding: 32px;
-        gap: 16px;
-        border-top: 1px solid rgba(v.$secondary-color, 0.5);
-        border-bottom: 1px solid rgba(v.$secondary-color, 0.5);
-        transition: all 250ms ease-in-out;
 
-        font-family: 'Fira Code';
-        font-weight: 500;
-        font-size: clamp(1.125rem, 1.018rem + 0.536vw, 1.5rem);
-        line-height: 120%;
-        color: v.$secondary-color;
+      label {
+        @include m.form-label;
+        position: relative;
+        border-top: 1px solid rgba(v.$secondary-color, 0.5);
 
         &:hover {
-          border-top: 1px solid rgba(v.$secondary-color, 1);
-          border-bottom: 1px solid rgba(v.$secondary-color, 1);
-          transition: all 250ms ease-in-out;
+          border-top-color: v.$secondary-color;
+          border-bottom-color: v.$secondary-color;
         }
 
         .email-tooltip {
@@ -161,12 +93,13 @@
 
           span {
             display: inline-block;
-            background: rgba(#1c1c1c, 0.95);
-            border: 1px solid rgba(#ec7b7b, 0.8);
+            background: rgba(v.$primary-color, 0.95);
+            border: 1px solid rgba(v.$error-color, 0.8);
             border-radius: 6px;
             padding: 4px 10px;
             font-size: clamp(0.875rem, 0.839rem + 0.179vw, 1rem);
-            color: #ec7b7b;
+            color: v.$error-color;
+            position: relative;
 
             &::after {
               content: '';
@@ -175,9 +108,9 @@
               left: 12px;
               width: 10px;
               height: 10px;
-              background: rgba(#1c1c1c, 0.95);
-              border-right: 1px solid rgba(#ec7b7b, 0.8);
-              border-bottom: 1px solid rgba(#ec7b7b, 0.8);
+              background: rgba(v.$primary-color, 0.95);
+              border-right: 1px solid rgba(v.$error-color, 0.8);
+              border-bottom: 1px solid rgba(v.$error-color, 0.8);
               transform: rotate(45deg);
             }
           }
@@ -185,87 +118,25 @@
       }
 
       input {
-        width: 100%;
-        max-width: 616px;
-        background: transparent;
-        border: none;
-        font-family: 'Karla';
-        font-weight: 400;
-        font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
-        color: white;
-        border-bottom: 1px solid transparent;
-
-        &:focus {
-          outline: none;
-          border-bottom-color: v.$secondary-color;
-        }
-
-        &::placeholder {
-          font-family: 'Karla';
-          font-weight: 400;
-          font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
-          color: rgba(white, 0.8);
-        }
-
-        &.invalid::placeholder {
-          color: rgba(#ec7b7bcc, 0.8);
-        }
+        @include m.form-input;
       }
     }
 
     &__message {
       width: 100%;
-      label {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        height: 131px;
-        padding: 32px;
-        gap: 16px;
-        border-top: 1px solid rgba(v.$secondary-color, 0.5);
-        border-bottom: 1px solid rgba(v.$secondary-color, 0.5);
-        transition: all 250ms ease-in-out;
 
-        font-family: 'Fira Code';
-        font-weight: 500;
-        font-size: clamp(1.125rem, 1.018rem + 0.536vw, 1.5rem);
-        line-height: 120%;
-        color: v.$secondary-color;
+      label {
+        @include m.form-label;
+        border-top: 1px solid rgba(v.$secondary-color, 0.5);
 
         &:hover {
-          border-top: 1px solid rgba(v.$secondary-color, 1);
-          border-bottom: 1px solid rgba(v.$secondary-color, 1);
-          transition: all 250ms ease-in-out;
+          border-top-color: v.$secondary-color;
+          border-bottom-color: v.$secondary-color;
         }
       }
 
       input {
-        width: 100%;
-        max-width: 616px;
-
-        background: transparent;
-        border: none;
-        font-family: 'Karla';
-        font-weight: 400;
-        font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
-        color: white;
-        border-bottom: 1px solid transparent;
-
-        &:focus {
-          outline: none;
-          border-bottom-color: v.$secondary-color;
-        }
-
-        &::placeholder {
-          font-family: 'Karla';
-          font-weight: 400;
-          font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
-          color: rgba(white, 0.8);
-        }
-
-        &.invalid::placeholder {
-          color: rgba(#ec7b7bcc, 0.8);
-        }
+        @include m.form-input;
       }
     }
 
@@ -278,17 +149,14 @@
       gap: 12px;
 
       .error-container {
-        min-height: 1.5em; // reserviert immer Platz für eine Zeile Fehlertext
+        min-height: 1.5em;
       }
 
       .error {
-        font-family: 'Karla';
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 120%;
-        color: #ec7b7bcc;
+        @include m.font-karla(400, 1rem, 120%);
+        color: rgba(v.$error-color, 0.8);
         opacity: 0;
-        transition: opacity 150ms ease-in-out;
+        transition: opacity v.$transition-fast;
 
         &.visible {
           opacity: 1;
@@ -302,23 +170,19 @@
         gap: 12px;
 
         &__text {
-          font-family: 'Karla';
-          font-weight: 400;
-          font-size: 1rem;
-          line-height: 120%;
+          @include m.font-karla(400, 1rem, 120%);
           color: white;
 
           a {
             color: v.$secondary-color;
             padding-bottom: 5px;
             box-shadow: 0 5px 0 -4px transparent;
-            transition: all 250ms ease-in-out;
+            transition: all v.$transition-default;
             letter-spacing: -3%;
 
             &:hover {
               color: white;
               box-shadow: 0 5px 0 -4px v.$secondary-color;
-              transition: all 250ms ease-in-out;
             }
           }
         }
@@ -347,7 +211,7 @@
           justify-content: center;
           z-index: 1;
           cursor: pointer;
-          transition: all 250ms ease-in-out;
+          transition: all v.$transition-default;
 
           &::before {
             content: '';
@@ -370,7 +234,6 @@
 
         input:hover + .checkbox__container {
           background: rgba(v.$secondary-color, 0.3);
-          transition: all 250ms ease-in-out;
         }
 
         input:hover + .checkbox__container::before {
@@ -388,11 +251,10 @@
 @media screen and (max-width: 767px) {
   .contact {
     flex-direction: column;
-    padding: 50px 16px;
+    padding: v.$section-padding-y-mobile v.$section-padding-x-mobile;
 
     &__text {
       width: 100%;
-      height: auto;
 
       span {
         margin-bottom: 16px;
@@ -407,21 +269,12 @@
       justify-content: center;
       width: 100%;
       max-width: 100%;
-      &__name {
-        label {
-          padding: 32px 16px;
-        }
-      }
 
-      &__mail {
-        label {
-          padding: 32px 16px;
-        }
-      }
-
+      &__name,
+      &__mail,
       &__message {
         label {
-          padding: 32px 16px;
+          padding: 32px v.$section-padding-x-mobile;
         }
       }
     }
@@ -434,19 +287,19 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .contact {
-    padding: 72px 48px;
+    padding: v.$section-padding-y v.$section-padding-x-tablet;
     gap: 32px;
     flex-direction: column;
 
     &__text {
       width: 100%;
-      height: auto;
     }
 
     &__form {
       width: 100%;
       max-width: none;
       min-height: auto;
+      margin: 0 auto;
     }
   }
 }

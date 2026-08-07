@@ -1,3 +1,4 @@
+// Layout
 @mixin center {
   display: flex;
   align-items: center;
@@ -24,8 +25,95 @@
   align-items: center;
 }
 
+// Max-width begrenzen ab 1440px
 @mixin content-width {
   @media screen and (min-width: 1440px) {
-    padding-inline:max(96px, calc(50% - 720px));
+    padding-inline: max(96px, calc(50% - 720px));
+  }
+}
+
+// Wiederverwendete Card-Styles (about, skills, references)
+@mixin section-card {
+  background: rgba(#3dcfb6, 0.1);
+  border: 1px solid #3dcfb6;
+  border-radius: 30px;
+  padding: 32px;
+}
+
+// Typografie
+@mixin font-karla($weight: 400, $size: 1rem, $line-height: 120%) {
+  font-family: 'Karla';
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+}
+
+@mixin font-fira($weight: 700, $size: 1rem, $line-height: 100%) {
+  font-family: 'Fira Code';
+  font-weight: $weight;
+  font-size: $size;
+  line-height: $line-height;
+}
+
+// Heading-Größen
+@mixin heading-xl {
+  @include font-fira(700, clamp(3rem, 2.714rem + 1.429vw, 4rem));
+  letter-spacing: -3%;
+}
+
+@mixin heading-lg {
+  @include font-fira(700, clamp(3.167rem, 2.921rem + 0.952vw, 4rem));
+  letter-spacing: -3%;
+}
+
+@mixin heading-md {
+  @include font-fira(700, clamp(1.125rem, 1.018rem + 0.536vw, 1.5rem));
+}
+
+@mixin text-body {
+  @include font-karla(400, clamp(1rem, 0.964rem + 0.179vw, 1.125rem), 120%);
+}
+
+@mixin text-label {
+  @include font-karla(500, clamp(1rem, 0.643rem + 0.952vw, 1.5rem));
+}
+
+// Form Label (wiederholt sich 3x in contact)
+@mixin form-label {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  min-height: 131px;
+  padding: 32px;
+  gap: 16px;
+  border-bottom: 1px solid rgba(#3dcfb6, 0.5);
+  transition: all 250ms ease-in-out;
+
+  @include font-fira(500, clamp(1.125rem, 1.018rem + 0.536vw, 1.5rem), 120%);
+  color: #3dcfb6;
+}
+
+// Form Input (wiederholt sich 3x in contact)
+@mixin form-input {
+  width: 100%;
+  background: transparent;
+  border: none;
+  @include font-karla(400, clamp(1rem, 0.964rem + 0.179vw, 1.125rem), 120%);
+  color: white;
+  border-bottom: 1px solid transparent;
+
+  &:focus {
+    outline: none;
+    border-bottom-color: #3dcfb6;
+  }
+
+  &::placeholder {
+    @include font-karla(400, clamp(1rem, 0.964rem + 0.179vw, 1.125rem));
+    color: rgba(white, 0.8);
+  }
+
+  &.invalid::placeholder {
+    color: rgba(#ec7b7b, 0.8);
   }
 }

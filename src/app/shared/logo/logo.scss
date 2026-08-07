@@ -1,3 +1,5 @@
+@use 'variables' as v;
+
 path {
   vector-effect: non-scaling-stroke;
   stroke-width: 1;
@@ -15,7 +17,7 @@ path {
 }
 
 :host(:hover) .logo-mm {
-  stroke: #3dcfb6;
+  stroke: v.$secondary-color;
 }
 
 .w {

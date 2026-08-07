@@ -18,13 +18,14 @@
   height: 100%;
   max-height: 568px;
   position: relative;
+
   img {
     position: relative;
     z-index: 1;
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 30px;
+    border-radius: v.$border-radius-card;
     filter: grayscale(100%);
   }
 
@@ -35,7 +36,7 @@
     top: 30px;
     bottom: -30px;
     left: -46px;
-    border-radius: 30px;
+    border-radius: v.$border-radius-card;
     background: repeating-linear-gradient(
       -135deg,
       transparent,
@@ -51,41 +52,28 @@
   justify-self: center;
 
   &__title {
-    font-family: 'Karla';
-    font-weight: 500;
-    font-size: clamp(1.125rem, 1.018rem + 0.536vw, 1.5rem);
-    line-height: 100%;
+    @include m.font-karla(500, clamp(1.125rem, 1.018rem + 0.536vw, 1.5rem), 100%);
     color: v.$secondary-color;
   }
 }
 
 .about__detail {
+  @include m.section-card;
   width: 100%;
   max-width: 568px;
   height: auto;
   display: flex;
   flex-direction: column;
-  background: rgba(v.$secondary-color, 0.1);
-  border: 1px solid v.$secondary-color;
-  border-radius: 30px;
-  padding: 32px;
   gap: 40px;
   margin-top: 20px;
 
   h3 {
-    font-family: 'Fira Code';
-    font-weight: 700;
-    font-size: clamp(3.167rem, 2.921rem + 0.952vw, 4rem);
-    line-height: 100%;
-    letter-spacing: -3%;
+    @include m.heading-lg;
     color: v.$secondary-color;
   }
 
   p {
-    font-family: 'Karla';
-    font-weight: 400;
-    font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
-    line-height: 120%;
+    @include m.text-body;
     color: white;
   }
 
@@ -114,13 +102,13 @@
   .about__me {
     display: flex;
     flex-direction: column;
-    padding: 100px 16px 50px;
+    padding: 100px v.$section-padding-x-mobile v.$section-padding-y-mobile;
     gap: 40px;
   }
 
   .portrait {
     width: 100%;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1 / 1;
     height: auto;
 
     &::before {
@@ -130,7 +118,7 @@
       top: 20px;
       bottom: 0;
       left: -12px;
-      border-radius: 30px;
+      border-radius: v.$border-radius-card;
       background: repeating-linear-gradient(
         -135deg,
         transparent,
@@ -147,14 +135,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 100px 48px 50px;
+    padding: 100px v.$section-padding-x-tablet v.$section-padding-y-mobile;
     gap: 60px;
   }
 
   .portrait {
     width: 100%;
     max-width: 568px;
-    aspect-ratio: 1/1;
+    aspect-ratio: 1 / 1;
     height: auto;
     align-self: auto;
 

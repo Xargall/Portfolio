@@ -6,33 +6,23 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 72px clamp(48px, -192px + 20vw, 96px) 80px;
+  padding: v.$section-padding-y clamp(48px, -192px + 20vw, 96px) 80px;
   background: v.$primary-color;
   @include m.content-width;
 
   span {
-    font-family: 'Karla';
-    font-weight: 700;
-    font-size: clamp(1rem, 0.857rem + 0.714vw, 1.5rem);
-    line-height: 100%;
+    @include m.font-karla(700, clamp(1rem, 0.857rem + 0.714vw, 1.5rem), 100%);
     color: v.$secondary-color;
   }
 
   h3 {
-    font-family: 'Fira Code';
-    font-weight: 700;
-    font-size: clamp(3rem, 2.714rem + 1.429vw, 4rem);
-    line-height: 100%;
-    letter-spacing: -3%;
+    @include m.heading-xl;
     color: v.$secondary-color;
     margin: 20px 0 40px;
   }
 
   p {
-    font-family: 'Karla';
-    font-weight: 400;
-    font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
-    line-height: 120%;
+    @include m.text-body;
     color: white;
   }
 }
@@ -55,7 +45,7 @@
     height: 110px;
     padding: 0 32px;
     border-bottom: 1px solid v.$secondary-color;
-    transition: all 150ms ease-in-out;
+    transition: all v.$transition-fast;
     cursor: pointer;
 
     &:first-child {
@@ -66,10 +56,8 @@
       }
     }
 
-    &:last-child {
-      .project__preview {
-        bottom: -10px;
-      }
+    &:last-child .project__preview {
+      bottom: -10px;
     }
 
     &__title {
@@ -83,10 +71,7 @@
     }
 
     h4 {
-      font-family: 'Fira Code';
-      font-weight: 700;
-      font-size: 1.5rem;
-      line-height: 120%;
+      @include m.font-fira(700, 1.5rem, 120%);
       color: white;
     }
 
@@ -95,11 +80,7 @@
       list-style: none;
 
       li {
-        font-family: 'Karla';
-        font-weight: 400;
-        font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
-        line-height: 120%;
-        letter-spacing: 0%;
+        @include m.text-body;
         color: white;
         padding: 0 4px;
       }
@@ -107,11 +88,11 @@
 
     &:hover {
       background: rgba(v.$secondary-color, 0.3);
-      transition: all 150ms ease-in-out;
+      transition: all v.$transition-fast;
 
       svg {
         opacity: 1;
-        transition: all 150ms ease-in-out;
+        transition: all v.$transition-fast;
       }
     }
   }
@@ -119,7 +100,7 @@
   &__preview {
     width: 295px;
     height: 192px;
-    border-radius: 16px;
+    border-radius: v.$border-radius-small;
     position: absolute;
     left: 103%;
 
@@ -133,7 +114,7 @@
         top: 30px;
         bottom: -20px;
         right: -20px;
-        border-radius: 16px;
+        border-radius: v.$border-radius-small;
         background: repeating-linear-gradient(
           135deg,
           transparent,
@@ -147,7 +128,7 @@
     img {
       width: 295px;
       height: 192px;
-      border-radius: 16px;
+      border-radius: v.$border-radius-small;
       position: relative;
       z-index: 1;
     }
@@ -162,7 +143,7 @@
 
 @media screen and (max-width: 767px) {
   .project__section {
-    padding: 50px 16px;
+    padding: v.$section-padding-y-mobile v.$section-padding-x-mobile;
   }
 
   .project__preview {
@@ -184,7 +165,7 @@
 
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   .project__section {
-    padding: 72px clamp(16px, -80px + 12.5vw, 48px) 80px;
+    padding: v.$section-padding-y clamp(16px, -80px + 12.5vw, 48px) 80px;
   }
 
   .project__preview {
@@ -194,7 +175,7 @@
 
 @media screen and (min-width: 1025px) and (max-width: 1200px) {
   .project__section {
-    padding: 72px 48px 80px;
+    padding: v.$section-padding-y v.$section-padding-x-tablet 80px;
   }
 
   .project__preview {

@@ -1,4 +1,5 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
 a,
 button {
@@ -10,16 +11,14 @@ button {
   border-radius: 100px;
   gap: 10px;
   padding: 13px clamp(0.8rem, calc(0.6rem + 1vw), 1.5rem);
-  font-family: 'Karla';
-  font-weight: 400;
-  font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
+  @include m.font-karla(400, clamp(1rem, 0.964rem + 0.179vw, 1.125rem));
   transition: all 250ms;
   color: white;
   cursor: pointer;
 
   &:hover {
     color: v.$secondary-color;
-    border: 1px solid v.$secondary-color;
+    border-color: v.$secondary-color;
     transition: all 250ms;
 
     svg {

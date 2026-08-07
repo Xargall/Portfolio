@@ -5,7 +5,7 @@ section {
   display: grid;
   grid-template-columns: 1fr 1fr;
   align-items: center;
-  padding: 72px clamp(48px, calc(-56px + 10vw), 104px);
+  padding: v.$section-padding-y clamp(48px, calc(-56px + 10vw), 104px);
   background: radial-gradient(ellipse 25% 50% at 0% 50%, rgba(#08463b, 0.3) 0%, #1c1c1c 100%);
   @include m.content-width;
 }
@@ -16,39 +16,27 @@ section {
   justify-self: center;
 
   &__title {
-    font-family: 'Karla';
-    font-weight: 500;
-    font-size: 1.5rem;
-    line-height: 100%;
+    @include m.font-karla(500, 1.5rem, 100%);
     color: v.$secondary-color;
   }
 
   &__box {
+    @include m.section-card;
     width: 100%;
     max-width: 520px;
     height: auto;
     display: flex;
     flex-direction: column;
-    background: rgba(v.$secondary-color, 0.1);
-    border: 1px solid v.$secondary-color;
-    border-radius: 30px;
-    padding: 32px;
     gap: 40px;
     margin-top: 20px;
 
     h3 {
-      font-family: 'Fira Code';
-      font-weight: 700;
-      font-size: clamp(3.167rem, 2.921rem + 0.952vw, 4rem);
-      line-height: 100%;
-      letter-spacing: -3%;
+      @include m.heading-lg;
       color: v.$secondary-color;
     }
 
     h4 {
-      font-family: 'Fira Code';
-      font-weight: 700;
-      font-size: clamp(1.125rem, 1.018rem + 0.536vw, 1.5rem);
+      @include m.heading-md;
       line-height: 100%;
       letter-spacing: -3%;
       color: white;
@@ -59,10 +47,7 @@ section {
     }
 
     p {
-      font-family: 'Karla';
-      font-weight: 400;
-      font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
-      line-height: 120%;
+      @include m.text-body;
       color: white;
     }
   }
@@ -70,9 +55,6 @@ section {
 
 .skill__overview {
   justify-self: center;
-}
-
-.skill__overview {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 32px;
@@ -88,7 +70,7 @@ section {
   align-items: center;
   gap: 8px;
   position: relative;
-  transition: all 250ms ease-in-out;
+  transition: all v.$transition-default;
 
   &:hover {
     scale: 1.1;
@@ -100,12 +82,9 @@ section {
   }
 
   p {
-    font-family: 'Fira Code';
-    font-weight: 400;
+    @include m.font-fira(400, clamp(1rem, 0.964rem + 0.179vw, 1.125rem), 120%);
     color: white;
-    line-height: 120%;
     letter-spacing: -3%;
-    font-size: clamp(1rem, 0.964rem + 0.179vw, 1.125rem);
     text-align: center;
   }
 
@@ -134,19 +113,16 @@ section {
     left: 50%;
     transform: translateX(-50%);
     background: white;
-    border-radius: 16px;
+    border-radius: v.$border-radius-small;
     padding: 8px 10px;
     gap: 8px;
     width: 190px;
     transition:
-      opacity 250ms ease-in-out,
-      visibility 250ms ease-in-out;
+      opacity v.$transition-default,
+      visibility v.$transition-default;
 
     p {
-      font-family: 'Karla';
-      font-weight: 400;
-      font-size: 1rem;
-      line-height: 100%;
+      @include m.font-karla(400, 1rem, 100%);
       color: v.$secondary-color;
       padding-bottom: 8px;
     }
@@ -185,13 +161,13 @@ section {
     flex-direction: column;
     gap: 8px;
     transition:
-      opacity 250ms ease-in-out,
-      visibility 250ms ease-in-out;
+      opacity v.$transition-default,
+      visibility v.$transition-default;
   }
 
   &.has-tooltip:hover > p {
     color: v.$secondary-color;
-    transition: all 250ms ease-in-out;
+    transition: all v.$transition-default;
   }
 }
 
@@ -199,7 +175,7 @@ section {
   section {
     display: flex;
     flex-direction: column;
-    padding: 50px 16px;
+    padding: v.$section-padding-y-mobile v.$section-padding-x-mobile;
     gap: 40px;
   }
 
@@ -215,16 +191,14 @@ section {
   }
 
   .skill__overview {
-    display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 32px 16px;
-    align-items: center;
-    justify-items: center;
   }
 
   .skill__item {
     width: clamp(85.3px, 71.914px + 4.183vw, 104px);
     height: 110px;
+
     img {
       width: 56px;
       height: 56px;
@@ -248,7 +222,7 @@ section {
   section {
     display: flex;
     flex-direction: column;
-    padding: 50px 48px;
+    padding: v.$section-padding-y-mobile v.$section-padding-x-tablet;
     gap: 60px;
   }
 

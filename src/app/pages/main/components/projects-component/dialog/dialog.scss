@@ -1,4 +1,5 @@
 @use 'variables' as v;
+@use 'mixins' as m;
 
 dialog {
   outline: none;
@@ -27,8 +28,7 @@ dialog {
   background: linear-gradient(135deg, #0a0f0e 0%, #0f1f1d 40%, #0f3a36 70%, #0b2a26 100%);
   padding: 56px 80px 91px;
   border: 1px solid v.$secondary-color;
-  border-radius: 30px;
-
+  border-radius: v.$border-radius-card;
   display: flex;
   gap: 88px;
 
@@ -52,10 +52,7 @@ dialog {
       li {
         display: flex;
         align-items: center;
-        font-family: 'Karla';
-        font-weight: 400;
-        font-size: 1rem;
-        line-height: 120%;
+        @include m.font-karla(400, 1rem, 120%);
         color: white;
         gap: 4px;
 
@@ -86,16 +83,15 @@ dialog {
       background: none;
       border: none;
       cursor: pointer;
-      transition: all 250ms ease-in-out;
+      transition: all v.$transition-default;
 
       svg {
-        transition: all 250ms ease-in-out;
+        transition: all v.$transition-default;
         fill: white;
       }
 
       &:hover {
         scale: 1.5;
-        transition: all 250ms ease-in-out;
 
         svg {
           fill: v.$secondary-color;
@@ -107,15 +103,12 @@ dialog {
       margin-top: 48px;
       display: flex;
       gap: 16px;
-      font-family: 'Karla';
-      font-weight: 400;
-      font-size: clamp(1rem, 0.911rem + 0.238vw, 1.125rem);
-      line-height: 120%;
+      @include m.font-karla(400, clamp(1rem, 0.911rem + 0.238vw, 1.125rem), 120%);
       color: v.$secondary-color;
       cursor: pointer;
 
       svg {
-        transition: all 250ms ease-in-out;
+        transition: all v.$transition-default;
       }
 
       &:hover {
@@ -123,7 +116,6 @@ dialog {
 
         svg {
           scale: 1.2;
-          transition: all 250ms ease-in-out;
         }
       }
     }
@@ -132,25 +124,19 @@ dialog {
       width: 100%;
       max-width: 520px;
       height: 530px;
-      border-radius: 30px;
+      border-radius: v.$border-radius-card;
       object-fit: cover;
     }
   }
 
   &__index {
-    font-family: 'Karla';
-    font-weight: 700;
-    font-size: clamp(4rem, 2.857rem + 5.714vw, 8rem);
-    line-height: 100%;
+    @include m.font-karla(700, clamp(4rem, 2.857rem + 5.714vw, 8rem), 100%);
     letter-spacing: -2%;
     color: v.$secondary-color;
   }
 
   &__title {
-    font-family: 'Fira Code';
-    font-weight: 700;
-    font-size: clamp(3.25rem, 3.036rem + 1.071vw, 4rem);
-    line-height: 80%;
+    @include m.font-fira(700, clamp(3.25rem, 3.036rem + 1.071vw, 4rem), 80%);
     letter-spacing: -3%;
     color: white;
     overflow-wrap: break-word;
@@ -158,18 +144,13 @@ dialog {
   }
 
   &__subtitle {
-    font-family: 'Fira Code';
-    font-weight: 700;
-    font-size: clamp(1.125rem, 1.018rem + 0.536vw, 1.5rem);
+    @include m.heading-md;
     line-height: 120%;
     color: v.$secondary-color;
   }
 
   &__description {
-    font-family: 'Karla';
-    font-weight: 400;
-    font-size: clamp(1rem, 0.911rem + 0.238vw, 1.125rem);
-    line-height: 120%;
+    @include m.font-karla(400, clamp(1rem, 0.911rem + 0.238vw, 1.125rem), 120%);
     color: white;
   }
 }
@@ -192,7 +173,7 @@ dialog {
     max-width: 366px;
     height: 100dvh;
     max-height: 844px;
-    padding: 16px;
+    padding: v.$section-padding-x-mobile;
     margin: auto;
     overflow: hidden;
     display: grid;

@@ -28,18 +28,14 @@ section {
   align-items: center;
 
   h1 {
-    font-family: 'Karla';
-    font-weight: 700;
-    font-size: clamp(2.25rem, 0.607rem + 8.214vw, 8rem);
+    @include m.font-karla(700, clamp(2.25rem, 0.607rem + 8.214vw, 8rem));
     color: white;
     padding-bottom: 40px;
     white-space: normal;
   }
 
   span {
-    font-family: 'Fira Code';
-    font-weight: 400;
-    font-size: clamp(1.25rem, 0.893rem + 1.786vw, 2.5rem);
+    @include m.font-fira(400, clamp(1.25rem, 0.893rem + 1.786vw, 2.5rem));
     color: white;
   }
 }
@@ -98,15 +94,12 @@ section {
   a {
     writing-mode: vertical-rl;
     transform: rotate(180deg);
-    font-family: 'Karla';
-    font-weight: 400;
-    font-size: 1.125rem;
-    line-height: 120%;
+    @include m.font-karla(400, 1.125rem, 120%);
 
     &.mail {
       writing-mode: vertical-rl;
       transform: rotate(180deg);
-      transition: all 250ms ease-in-out;
+      transition: all v.$transition-default;
 
       &:hover {
         color: v.$secondary-color;
@@ -117,7 +110,7 @@ section {
       writing-mode: horizontal-tb;
       transform: none;
       position: relative;
-      transition: all 250ms ease-in-out;
+      transition: all v.$transition-default;
 
       &::after {
         content: '';
@@ -181,11 +174,8 @@ section {
 
     span {
       margin-right: 55px;
-      font-family: 'Karla';
-      font-weight: 400;
-      font-size: clamp(1.125rem, 0.875rem + 1.25vw, 2rem);
+      @include m.font-karla(400, clamp(1.125rem, 0.875rem + 1.25vw, 2rem), 120%);
       color: v.$secondary-color;
-      line-height: 120%;
     }
   }
 }
@@ -201,7 +191,7 @@ section {
 
 @media (max-width: 767px) {
   section {
-    padding-inline: 16px;
+    padding-inline: v.$section-padding-x-mobile;
     height: calc(100vh - 82px);
   }
 
@@ -305,20 +295,20 @@ section {
   }
 
   .hero__down {
-    left: 48px;
+    left: v.$section-padding-x-tablet;
   }
 
   .hero__link {
-    right: 48px;
-  }
+    right: v.$section-padding-x-tablet;
 
-  .hero__link {
     .mail__text {
       display: none;
     }
+
     .mail__icon {
       display: flex;
     }
+
     a.mail__icon {
       transform: none;
       writing-mode: horizontal-tb;
