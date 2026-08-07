@@ -118,31 +118,26 @@
     gap: 40px;
   }
 
-  .portrait::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    top: 20px;
-    bottom: 0;
-    left: -12px;
-    border-radius: 30px;
-    background: repeating-linear-gradient(
-      -135deg,
-      transparent,
-      transparent 10px,
-      v.$secondary-color 10px,
-      v.$secondary-color 11px
-    );
-  }
+  .portrait {
+    width: 100%;
+    aspect-ratio: 1/1;
+    height: auto;
 
-  .about__detail {
-    ul {
-      li {
-        img {
-          width: 21px;
-          height: 25px;
-        }
-      }
+    &::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      top: 20px;
+      bottom: 0;
+      left: -12px;
+      border-radius: 30px;
+      background: repeating-linear-gradient(
+        -135deg,
+        transparent,
+        transparent 10px,
+        v.$secondary-color 10px,
+        v.$secondary-color 11px
+      );
     }
   }
 }
@@ -156,8 +151,13 @@
   }
 
   .portrait {
-    max-width: 568px;
     width: 100%;
+    max-width: 568px;
+    aspect-ratio: 1/1;
+    height: auto;
+    img {
+      min-height: 358px;
+    }
 
     &::before {
       top: 20px;
