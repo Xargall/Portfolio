@@ -256,6 +256,8 @@ section {
   }
 
   .hero__link {
+    height: 256px;
+    align-self: end;
     position: static;
     bottom: auto;
     right: auto;
@@ -265,7 +267,7 @@ section {
 
     .line-right {
       flex: 1;
-      height: auto;
+      height: 215px;
     }
 
     .mail__text {
