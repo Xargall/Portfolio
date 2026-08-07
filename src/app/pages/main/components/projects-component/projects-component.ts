@@ -21,7 +21,7 @@ export class ProjectsComponent {
       img: '/assets/img/pokedex-preview.png',
       description: 'projects.pokedex.description',
       github: 'https://github.com/Xargall/Poke-Dex.git',
-      demo: '',
+      demo: 'https://pokedex.mathias-mayer.de',
     },
     {
       name: 'El Pollo Loco',
@@ -29,7 +29,7 @@ export class ProjectsComponent {
       img: '/assets/img/el-pollo-loco-preview.png',
       description: 'projects.el_pollo_loco.description',
       github: 'https://github.com/Xargall/El-Pollo-Loco.git',
-      demo: '',
+      demo: 'https://elpolloloco.mathias-mayer.de',
     },
   ];
 
