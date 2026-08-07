@@ -94,6 +94,9 @@
     "privacy_text": "Ich habe die ",
     "privacy_link": "Datenschutzerklärung",
     "privacy_text2": "gelesen und stimme der Verarbeitung meiner Daten zu.",
-    "submit": "Sag Hallo ;)"
+    "submit": "Sag Hallo ;)",
+    "sending": "Wird gesendet...",
+    "success": "Nachricht gesendet! Ich melde mich bald.",
+    "error": "Etwas ist schiefgelaufen. Bitte versuch es später nochmal."
   }
 }

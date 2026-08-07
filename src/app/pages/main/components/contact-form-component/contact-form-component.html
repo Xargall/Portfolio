@@ -103,8 +103,21 @@
     </div>
     <app-button
       type="submit"
-      [disabled]="contactForm().invalid()"
-      [label]="'contact.submit' | translate"
+      [disabled]="contactForm().invalid() || sendState() === 'sending'"
+      [label]="
+        sendState() === 'sending' ? ('contact.sending' | translate) : ('contact.submit' | translate)
+      "
+      (click)="onSubmit()"
     ></app-button>
+    @if (sendState() === 'success') {
+      <p class="form-feedback form-feedback--success">
+        {{ 'contact.success' | translate }}
+      </p>
+    }
+    @if (sendState() === 'error') {
+      <p class="form-feedback form-feedback--error">
+        {{ 'contact.error' | translate }}
+      </p>
+    }
   </div>
 </section>

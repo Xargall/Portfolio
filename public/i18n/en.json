@@ -94,6 +94,9 @@
     "privacy_text": "I've read the",
     "privacy_link": "privacy policy",
     "privacy_text2": "and agree to the processing of my data as outlined.",
-    "submit": "Say Hello ;)"
+    "submit": "Say Hello ;)",
+    "sending": "Sending...",
+    "success": "Message sent! I'll get back to you soon.",
+    "error": "Something went wrong. Please try again later."
   }
 }
