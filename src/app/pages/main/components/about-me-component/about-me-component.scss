@@ -146,8 +146,9 @@
   .about__me {
     display: flex;
     flex-direction: column;
+    align-items: center;
     padding: 100px 48px 50px;
-    gap: 40px;
+    gap: 60px;
   }
 
   .portrait {
@@ -155,6 +156,8 @@
     max-width: 568px;
     aspect-ratio: 1/1;
     height: auto;
+    align-self: auto;
+
     img {
       min-height: 358px;
     }
@@ -166,8 +169,14 @@
     }
   }
 
+  .about__text {
+    width: 100%;
+    max-width: 568px;
+    align-self: auto;
+  }
+
   .about__detail {
-    max-width: 600px;
+    max-width: 568px;
     align-self: center;
   }
 }

@@ -73,9 +73,9 @@
   },
   "contact": {
     "errors": {
-      "name_required": "Oops! It seems your name is missing",
+      "name_required": "Oops! Your name is missing",
       "email_required": "Hoppla! Your email is required",
-      "email_invalid": "Please enter a valid email address",
+      "email_invalid": "Please enter a valid email",
       "message_required": "What do you need to develop?",
       "privacy_required": "Please accept the privacy policy."
     },

@@ -75,7 +75,7 @@
     "errors": {
       "name_required": "Oops! Dein Name fehlt noch.",
       "email_required": "Hoppla! Deine E-Mail wird benötigt.",
-      "email_invalid": "Bitte gib eine gültige E-Mail-Adresse ein.",
+      "email_invalid": "Ungültige E-Mail-Adresse.",
       "message_required": "Was soll entwickelt werden?",
       "privacy_required": "Bitte akzeptiere die Datenschutzerklärung."
     },

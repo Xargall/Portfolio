@@ -2,7 +2,7 @@
 @use 'mixins' as m;
 
 header {
-  position: relative;
+  position: absolute;
   width: 100%;
   height: 100px;
   display: flex;
@@ -11,6 +11,8 @@ header {
   padding: 35px clamp(16px, 2.381vw + 2.667px, 96px);
   @include m.content-width;
   background: linear-gradient(0deg, rgba(0, 0, 0, 0) 13.56%, rgba(0, 0, 0, 0.6) 84.01%);
+  top: 0;
+  z-index: 100;
 }
 
 .initials {

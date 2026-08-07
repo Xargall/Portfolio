@@ -1,9 +1,10 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, inject, effect } from '@angular/core';
 import { FormField, email, form, required, submit } from '@angular/forms/signals';
 import { ContactFormModel } from './contact-form.model';
 import { Button } from '../../../../shared/button/button';
 import { TranslatePipe } from '@ngx-translate/core';
 import { RouterLink } from '@angular/router';
+import { LanguageService } from '../../../../shared/services/language.service';
 
 @Component({
   selector: 'app-contact-form-component',
@@ -12,6 +13,8 @@ import { RouterLink } from '@angular/router';
   styleUrl: './contact-form-component.scss',
 })
 export class ContactFormComponent {
+  langService = inject(LanguageService);
+
   contactModel = signal<ContactFormModel>({
     name: '',
     email: '',
@@ -26,4 +29,10 @@ export class ContactFormComponent {
     required(contactPath.message, { message: 'contact.errors.message_required' });
     required(contactPath.privacyAccepted, { message: 'contact.errors.privacy_required' });
   });
+
+  constructor() {
+    effect(() => {
+      document.documentElement.lang = this.langService.currentLang();
+    });
+  }
 }
