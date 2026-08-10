@@ -64,9 +64,9 @@ switch ($_SERVER['REQUEST_METHOD']) {
         $headers = [];
         $headers[] = 'MIME-Version: 1.0';
         $headers[] = 'Content-type: text/html; charset=utf-8';
-        $headers[] = 'From: Website Kontakt <' . $siteEmail . '>'; 
+        $headers[] = 'From: Website Kontakt <kontakt@mathias-mayer.de>'; 
         $headers[] = 'Reply-To: ' . $email;
-        $headers[] = 'Return-Path: ' . $siteEmail; 
+        $headers[] = 'Return-Path: kontakt@mathias-mayer.de'; 
 
         // Send mail
         $success = mail(
@@ -74,7 +74,7 @@ switch ($_SERVER['REQUEST_METHOD']) {
             $subject,
             $mailBody,
             implode("\r\n", $headers),
-            '-f ' . $siteEmail 
+            '-f kontakt@mathias-mayer.de' 
         );
 
         if ($success) {

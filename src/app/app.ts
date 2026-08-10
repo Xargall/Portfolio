@@ -10,7 +10,7 @@ import { Footer } from './shared/components/footer/footer';
   styleUrl: './app.scss',
 })
 export class App {
-  protected readonly title = signal('Portfolio');
+  protected readonly title = signal('Mathias Mayer');
   private destroyRef = inject(DestroyRef);
 
   mouseX = signal(0);

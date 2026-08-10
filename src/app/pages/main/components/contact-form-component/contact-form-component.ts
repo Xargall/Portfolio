@@ -53,6 +53,7 @@ export class ContactFormComponent {
         if (res.success) {
           this.sendState.set('success');
           this.contactModel.set({ name: '', email: '', message: '', privacyAccepted: false });
+          this.contactForm().reset();
         } else {
           this.sendState.set('error');
         }

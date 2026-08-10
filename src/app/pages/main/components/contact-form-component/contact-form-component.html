@@ -101,14 +101,18 @@
         </span>
       </div>
     </div>
-    <app-button
-      type="submit"
-      [disabled]="contactForm().invalid() || sendState() === 'sending'"
-      [label]="
-        sendState() === 'sending' ? ('contact.sending' | translate) : ('contact.submit' | translate)
-      "
-      (click)="onSubmit()"
-    ></app-button>
+    @if (sendState() !== 'success') {
+      <app-button
+        type="submit"
+        [disabled]="contactForm().invalid() || sendState() === 'sending'"
+        [label]="
+          sendState() === 'sending'
+            ? ('contact.sending' | translate)
+            : ('contact.submit' | translate)
+        "
+        (click)="onSubmit()"
+      ></app-button>
+    }
     @if (sendState() === 'success') {
       <p class="form-feedback form-feedback--success">
         {{ 'contact.success' | translate }}
