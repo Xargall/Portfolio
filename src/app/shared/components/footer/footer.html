@@ -6,8 +6,8 @@
           <app-logo [alwaysExpanded]="true"></app-logo></div
       ></a>
       <div class="sub_info">
-        <p>Fullstack Developer</p>
-        <p>Leipzig Germany</p>
+        <p>{{ 'footer.role' | translate }}</p>
+        <p>{{ 'footer.location' | translate }}</p>
       </div>
     </div>
   </article>
@@ -28,7 +28,9 @@
         >
       </li>
       <li><a href="mailto: mayer.mathias@proton.me">Email</a></li>
-      <li><a [routerLink]="'/legal-notice'">Legal Notice</a></li>
+      <li>
+        <a [routerLink]="'/legal-notice'">{{ 'footer.legal_notice' | translate }}</a>
+      </li>
     </ul>
   </article>
 </footer>

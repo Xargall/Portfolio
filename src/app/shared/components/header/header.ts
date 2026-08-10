@@ -16,6 +16,7 @@ export class Header {
 
   setActive(link: string) {
     this.activeLink = link;
+    this.isMenuOpen.set(false);
   }
 
   toggleMenu() {

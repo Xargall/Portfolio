@@ -52,6 +52,7 @@ export class ContactFormComponent {
       next: (res) => {
         if (res.success) {
           this.sendState.set('success');
+          setTimeout(() => this.sendState.set('idle'), 10000);
           this.contactModel.set({ name: '', email: '', message: '', privacyAccepted: false });
           this.contactForm().reset();
         } else {

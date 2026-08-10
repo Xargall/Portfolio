@@ -152,7 +152,7 @@
 
 @media screen and (max-width: 767px) {
   .reference {
-    padding: v.$section-padding-y-mobile 0;
+    padding: v.$section-padding-y-mobile v.$section-padding-x-mobile;
 
     &__title {
       text-align: center;
@@ -160,7 +160,7 @@
     }
 
     &__slider {
-      width: 100%;
+      width: calc(100% + 32px);
       height: 340px;
       margin-left: -16px;
       margin-right: -16px;
@@ -192,5 +192,17 @@
 @media screen and (min-width: 512px) and (max-width: 767px) {
   .reference__quote {
     left: calc(50% - 220px);
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .reference {
+    padding: v.$section-padding-y v.$section-padding-x-tablet;
+
+    &__slider {
+      width: calc(100% + 96px); 
+      margin-left: -48px;
+      margin-right: -48px;
+    }
   }
 }

@@ -98,5 +98,10 @@
     "sending": "Wird gesendet...",
     "success": "Nachricht gesendet! Ich melde mich bald.",
     "error": "Etwas ist schiefgelaufen. Bitte versuch es später nochmal."
+  },
+  "footer": {
+    "role": "Fullstack Entwickler",
+    "location": "Leipzig Deutschland",
+    "legal_notice": "Impressum"
   }
 }

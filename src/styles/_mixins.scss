@@ -1,3 +1,5 @@
+@use 'variables' as v;
+
 // Layout
 @mixin center {
   display: flex;
@@ -111,6 +113,15 @@
   &::placeholder {
     @include font-karla(400, clamp(1rem, 0.964rem + 0.179vw, 1.125rem));
     color: rgba(white, 0.8);
+  }
+
+  &:-webkit-autofill,
+  &:-webkit-autofill:hover,
+  &:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px v.$primary-color inset;
+    -webkit-text-fill-color: white;
+    transition: background-color 5000s ease-in-out 0s;
+    caret-color: white;
   }
 
   &.invalid::placeholder {

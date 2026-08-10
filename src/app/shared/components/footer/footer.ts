@@ -1,10 +1,11 @@
 import { Component, inject, signal } from '@angular/core';
 import { RouterLink, Router, NavigationEnd } from '@angular/router';
 import { Logo } from '../../logo/logo';
+import { TranslatePipe } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-footer',
-  imports: [RouterLink, Logo],
+  imports: [RouterLink, Logo, TranslatePipe],
   templateUrl: './footer.html',
   styleUrl: './footer.scss',
 })
@@ -13,7 +14,7 @@ export class Footer {
   currentUrl = signal(this.router.url);
 
   constructor() {
-    this.router.events.subscribe(e => {
+    this.router.events.subscribe((e) => {
       if (e instanceof NavigationEnd) {
         this.currentUrl.set(e.urlAfterRedirects);
       }
@@ -21,7 +22,8 @@ export class Footer {
   }
 
   isLegalPage() {
-    return this.currentUrl().includes('privacy-policy') ||
-           this.currentUrl().includes('legal-notice');
+    return (
+      this.currentUrl().includes('privacy-policy') || this.currentUrl().includes('legal-notice')
+    );
   }
 }
