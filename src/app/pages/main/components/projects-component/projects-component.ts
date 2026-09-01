@@ -31,6 +31,14 @@ export class ProjectsComponent {
       github: 'https://github.com/Xargall/El-Pollo-Loco.git',
       demo: 'https://elpolloloco.mathias-mayer.de',
     },
+    {
+      name: 'TCG Vault',
+      techs: ['HTML', 'CSS', 'TypeScript', 'Angular', 'Supabase', 'Rest-API'],
+      img: '/assets/img/tcg-vault-preview.png',
+      description: 'projects.tcg-vault.description',
+      github: 'https://github.com/Xargall/MTG-Vault',
+      demo: 'https://tcg-vault.mathias-mayer.de',
+    },
   ];
 
   onMouseEnter(index: number) {

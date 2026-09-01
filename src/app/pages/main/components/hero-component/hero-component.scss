@@ -315,3 +315,19 @@ section {
     }
   }
 }
+
+@media screen and (max-height: 675px) {
+  .hero__link {
+    .mail__text {
+      display: none;
+    }
+    .mail__icon {
+      display: flex;
+    }
+
+    a.mail__icon {
+      transform: none;
+      writing-mode: horizontal-tb;
+    }
+  }
+}

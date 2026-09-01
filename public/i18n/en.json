@@ -44,6 +44,9 @@
     },
     "el_pollo_loco": {
       "description": "Run, jump, throw — El Pollo Loco was my first dive into object-oriented JavaScript. Help Pepe collect coins and salsa bottles to take down the crazy hen."
+    },
+    "tcg_vault": {
+      "description": "Collect, manage, dominate — TCG Collector brings Magic: The Gathering and Yu-Gi-Oh! together in one app. Browse thousands of cards via live API, manage your collection and find out which decks you can already build."
     }
   },
   "dialog": {
