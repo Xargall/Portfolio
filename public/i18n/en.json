@@ -46,7 +46,10 @@
       "description": "Run, jump, throw — El Pollo Loco was my first dive into object-oriented JavaScript. Help Pepe collect coins and salsa bottles to take down the crazy hen."
     },
     "tcg_vault": {
-      "description": "Collect, manage, dominate — TCG Collector brings Magic: The Gathering and Yu-Gi-Oh! together in one app. Browse thousands of cards via live API, manage your collection and find out which decks you can already build."
+      "description": "Collect, manage, dominate — TCG Vault brings Magic: The Gathering and Yu-Gi-Oh! together in one app. Browse thousands of cards via live API, manage your collection and find out which decks you can already build."
+    },
+    "join": {
+      "description": "Manage tasks, coordinate teams, keep projects on track — Join brings all your project management into one clear Kanban board. Create tasks, assign them to contacts, and stay on top of every step in your workflow."
     }
   },
   "dialog": {
@@ -58,20 +61,20 @@
   "references": {
     "heading": "What my colleagues say about me",
     "jobs": {
-      "role": "Fruit Salesman",
-      "text": "I asked Mathias to think different. He did. Then he made it look good AND work. I would have fired everyone else."
+      "role": "Team Partner",
+      "text": "Working with Mathias was a great experience, and I would love to team up with him again anytime. He has a helpful way of thinking along with the project and consistently shares useful, constructive feedback. Even when we had to fix things last minute, he jumped right in with a positive attitude and got it done. He is a truly reliable teammate who brings great value to any project."
     },
     "gates": {
-      "role": "Professional Window Cleaner",
-      "text": "Mathias wrote cleaner code in one afternoon than my entire team managed in a decade. Also he never crashed once."
+      "role": "Team Partner",
+      "text": "Mathias brings an impressive combination of technical precision, logical thinking, and the ability to get things done. In our shared project at the Developer Akademie, he tackled challenging features independently and with a clean approach, while placing great importance on maintainable code. His quick grasp of new concepts and his solution-oriented mindset make him a developer you can rely on one hundred percent."
     },
     "zuckerberg": {
-      "role": "Definitely a Human Person",
-      "text": "Mathias is a great developer. I have analyzed 4.2 billion data points to confirm this. I feel emotions about it."
+      "role": "Team Partner",
+      "text": "I worked with Mathias on our bootcamp project 'Join'. From the very start, the collaboration was straightforward, reliable, and pleasant. I especially appreciate his careful, detail-oriented way of working. He actively contributes to the team, thinks along with everyone, and is someone you can always count on."
     },
     "newell": {
-      "role": "Professional Counter",
-      "text": "Mathias delivered so fast I almost announced a release date. Almost. We do not do that here. But I was tempted."
+      "role": "Team Partner",
+      "text": "I greatly valued working with Mathias Mayer on our shared project. He consistently stood out for his reliable way of working and made a significant contribution to our team's success. I can wholeheartedly recommend him as a technically competent and always collegial partner."
     }
   },
   "contact": {

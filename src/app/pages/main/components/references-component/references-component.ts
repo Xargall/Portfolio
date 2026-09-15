@@ -13,22 +13,22 @@ export class ReferencesComponent {
 
   references: ReferenceModel[] = [
     {
-      name: 'S.Jobs',
+      name: 'Anne Manthey',
       role: 'references.jobs.role',
       reference: 'references.jobs.text',
     },
     {
-      name: 'B.Gates',
+      name: 'Maik Radke',
       role: 'references.gates.role',
       reference: 'references.gates.text',
     },
     {
-      name: 'M.Zuckerberg',
+      name: 'Max Belich',
       role: 'references.zuckerberg.role',
       reference: 'references.zuckerberg.text',
     },
     {
-      name: 'G.Newell',
+      name: 'Muhammed Kemiksiz',
       role: 'references.newell.role',
       reference: 'references.newell.text',
     },

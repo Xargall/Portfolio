@@ -16,6 +16,14 @@ export class ProjectsComponent {
 
   projects: ProjectModel[] = [
     {
+      name: 'Join',
+      techs: ['HTML', 'CSS', 'TypeScript', 'Angular', 'Supabase'],
+      img: '/assets/img/join-preview.png',
+      description: 'projects.join.description',
+      github: 'ttps://github.com/Xargall/join.git',
+      demo: 'https://join.mathias-mayer.de',
+    },
+    {
       name: 'PokéDex',
       techs: ['HTML', 'CSS', 'JavaScript', 'Rest-API'],
       img: '/assets/img/pokedex-preview.png',
@@ -35,7 +43,7 @@ export class ProjectsComponent {
       name: 'TCG Vault',
       techs: ['HTML', 'CSS', 'TypeScript', 'Angular', 'Supabase', 'Rest-API'],
       img: '/assets/img/tcg-vault-preview.png',
-      description: 'projects.tcg-vault.description',
+      description: 'projects.tcg_vault.description',
       github: 'https://github.com/Xargall/MTG-Vault',
       demo: 'https://tcg-vault.mathias-mayer.de',
     },

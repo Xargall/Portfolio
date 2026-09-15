@@ -45,8 +45,11 @@
     "el_pollo_loco": {
       "description": "Rennen, springen, werfen — El Pollo Loco war mein erster Einstieg in objektorientiertes JavaScript. Hilf Pepe, Münzen und Salsaflaschen zu sammeln, um das verrückte Huhn zu besiegen."
     },
-    "tcg-vault": {
-      "description": "Sammeln, verwalten, dominieren — der TCG Collector verbindet Magic: The Gathering und Yu-Gi-Oh! in einer App. Durchsuche tausende Karten via Live-API, verwalte deine Sammlung und finde heraus welche Decks du bereits bauen kannst."
+    "tcg_vault": {
+      "description": "Sammeln, verwalten, dominieren — der TCG Vault verbindet Magic: The Gathering und Yu-Gi-Oh! in einer App. Durchsuche tausende Karten via Live-API, verwalte deine Sammlung und finde heraus welche Decks du bereits bauen kannst."
+    },
+    "join": {
+      "description": "Aufgaben verwalten, Teams koordinieren, Projekte im Griff behalten — Join bringt dein gesamtes Projektmanagement in ein übersichtliches Kanban-Board. Erstelle Tasks, weise sie Kontakten zu und behalte den Überblick über jeden Schritt deines Workflows."
     }
   },
   "dialog": {
@@ -58,20 +61,20 @@
   "references": {
     "heading": "Was meine Kollegen über mich sagen",
     "jobs": {
-      "role": "Obsthändler",
-      "text": "Ich habe Mathias gebeten, anders zu denken. Hat er. Dann hat er es auch noch gut aussehen lassen UND funktionieren. Alle anderen hätte ich gefeuert."
+      "role": "Team Partner",
+      "text": "Die Zusammenarbeit mit Mathias war eine tolle Erfahrung, und ich würde jederzeit wieder mit ihm zusammenarbeiten. Er denkt konstruktiv mit und gibt stets hilfreiches, sachdienliches Feedback. Selbst wenn wir auf den letzten Drücker noch etwas ausbessern mussten, war er sofort mit einer positiven Einstellung dabei und hat es erledigt. Er ist ein wirklich verlässlicher Teamkollege, der jedem Projekt echten Mehrwert bringt."
     },
     "gates": {
-      "role": "Professioneller Fensterputzer",
-      "text": "Mathias hat an einem Nachmittag saubereren Code geschrieben als mein gesamtes Team in einem Jahrzehnt. Außerdem ist er kein einziges Mal abgestürzt."
+      "role": "Team Partner",
+      "text": "Mathias bringt eine beeindruckende Mischung aus technischer Präzision, logischem Verständnis und Umsetzungskraft mit. In unserem gemeinsamen Projekt an der Developer Akademie hat er schwierige Features eigenständig und sauber gelöst sowie großen Wert auf wartbaren Code gelegt. Seine schnelle Auffassungsgabe und seine lösungsorientierte Herangehensweise machen ihn zu einem Entwickler, auf den man sich zu 100 % verlassen kann."
     },
     "zuckerberg": {
-      "role": "Definitiv ein menschlicher Mensch",
-      "text": "Mathias ist ein großartiger Entwickler. Ich habe 4,2 Milliarden Datenpunkte analysiert, um das zu bestätigen. Ich empfinde Gefühle darüber."
+      "role": "Team Partner",
+      "text": "Ich habe mit Mathias im Rahmen unseres Bootcamp-Projekts „Join“ zusammengearbeitet. Die Zusammenarbeit war von Anfang an unkompliziert, zuverlässig und angenehm. Besonders schätze ich seine sorgfältige Arbeitsweise und seinen Blick für Details. Er bringt sich aktiv ins Team ein, denkt mit und ist jemand, auf den man sich jederzeit verlassen kann."
     },
     "newell": {
-      "role": "Professioneller Zähler",
-      "text": "Mathias hat so schnell geliefert, dass ich fast ein Erscheinungsdatum angekündigt hätte. Fast. Das machen wir hier nicht. Aber ich war versucht."
+      "role": "Team Partner",
+      "text": "Ich habe die Zusammenarbeit mit Mathias Mayer in unserem gemeinsamen Projekt sehr geschätzt. Er hat sich jederzeit durch seine zuverlässige Arbeitsweise ausgezeichnet und maßgeblich zum Erfolg unseres Teams beigetragen. Ich kann ihn als fachlich kompetenten und stets kollegialen Partner absolut empfehlen."
     }
   },
   "contact": {
