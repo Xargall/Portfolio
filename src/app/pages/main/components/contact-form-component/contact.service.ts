@@ -12,7 +12,7 @@ export interface ContactResponse {
 export class ContactService {
   private http = inject(HttpClient);
 
-  private readonly apiUrl = 'https://www.mathias-mayer.de/send_mail.php';
+  private readonly apiUrl = '/send_mail.php';
 
   send(data: Omit<ContactFormModel, 'privacyAccepted'>): Observable<ContactResponse> {
     return this.http.post<ContactResponse>(this.apiUrl, {
