@@ -45,8 +45,8 @@
     "el_pollo_loco": {
       "description": "Rennen, springen, werfen — El Pollo Loco war mein erster Einstieg in objektorientiertes JavaScript. Hilf Pepe, Münzen und Salsaflaschen zu sammeln, um das verrückte Huhn zu besiegen."
     },
-    "tcg_vault": {
-      "description": "Sammeln, verwalten, dominieren — der TCG Vault verbindet Magic: The Gathering und Yu-Gi-Oh! in einer App. Durchsuche tausende Karten via Live-API, verwalte deine Sammlung und finde heraus welche Decks du bereits bauen kannst."
+    "dabubble": {
+      "description": "Chatten, Channels bilden, zusammenarbeiten — DABubble ist ein Slack-Klon mit Echtzeit-Messaging, Channels und Direktnachrichten. Erstelle einen Avatar, tritt Channels bei oder starte private Chats und reagiere auf Nachrichten in Echtzeit, powered by Firebase."
     },
     "join": {
       "description": "Aufgaben verwalten, Teams koordinieren, Projekte im Griff behalten — Join bringt dein gesamtes Projektmanagement in ein übersichtliches Kanban-Board. Erstelle Tasks, weise sie Kontakten zu und behalte den Überblick über jeden Schritt deines Workflows."
