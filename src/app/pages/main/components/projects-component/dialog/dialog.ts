@@ -26,6 +26,7 @@ export class Dialog {
     TypeScript: '/assets/icons/type-script-dialog.svg',
     Angular: '/assets/icons/angular-dialog.svg',
     Supabase: '/assets/icons/supabase-dialog.svg',
+    Firebase: '/assets/icons/firebase-dialog.svg',
   };
 
   constructor() {

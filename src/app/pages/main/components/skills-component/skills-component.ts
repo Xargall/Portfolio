@@ -21,6 +21,7 @@ export class SkillsComponent {
     { name: 'Rest-API', icon: '/assets/icons/rest-api-logo.svg' },
     { name: 'Angular', icon: '/assets/icons/angular-logo.svg' },
     { name: 'Supabase', icon: '/assets/icons/supabase-logo.svg' },
+    { name: 'Firebase', icon: '/assets/icons/firebase-logo.svg' },
     { name: 'Growth Mindset', icon: '/assets/icons/mindset-logo.svg', tooltip: true },
   ];
 
