@@ -32,6 +32,11 @@ export class ReferencesComponent {
       role: 'references.newell.role',
       reference: 'references.newell.text',
     },
+    {
+      name: 'Kristina Starovoit',
+      role: 'references.altmann.role',
+      reference: 'references.altmann.text',
+    },
   ];
 
   visibleReferences = computed(() => {
