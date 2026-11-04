@@ -31,12 +31,12 @@
 
   &__slider {
     --card-gap: clamp(8px, -10.286px + 5.714vw, 72px);
-    height: 300px;
     width: calc(100% + 192px);
     position: relative;
     overflow: hidden;
     margin-left: -96px;
     margin-right: -96px;
+    padding-block: 16px;
     display: grid;
     place-items: center;
 
@@ -67,11 +67,12 @@
     grid-row: 1;
     width: 100%;
     max-width: 632px;
-    min-height: 248px;
+    height: 420px;
     padding: 52px 42px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 32px;
     background: rgba(v.$secondary-color, 0.1);
     border: 1px solid v.$secondary-color;
     border-radius: 32px;
@@ -102,9 +103,16 @@
       pointer-events: none;
     }
 
+    // shortcut: clamped at 10 lines so every box stays the same height; a far longer
+    // translation would get an ellipsis here instead of growing the card.
     p {
       @include m.font-karla(400, clamp(1rem, 0.821rem + 0.476vw, 1.25rem), 120%);
       color: white;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 10;
+      line-clamp: 10;
+      overflow: hidden;
     }
 
     &__person {
@@ -161,7 +169,6 @@
 
     &__slider {
       width: calc(100% + 32px);
-      height: 340px;
       margin-left: -16px;
       margin-right: -16px;
 
@@ -179,8 +186,13 @@
 
     &__card {
       max-width: min(calc(100% - 47px), 480px);
-      min-height: 280px;
+      height: 540px;
       padding: 40px;
+
+      p {
+        -webkit-line-clamp: 18;
+        line-clamp: 18;
+      }
     }
 
     &__navigation {
