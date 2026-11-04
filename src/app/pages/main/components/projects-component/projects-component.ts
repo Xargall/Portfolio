@@ -40,12 +40,12 @@ export class ProjectsComponent {
       demo: 'https://elpolloloco.mathias-mayer.de',
     },
     {
-      name: 'TCG Vault',
-      techs: ['HTML', 'CSS', 'TypeScript', 'Angular', 'Supabase', 'Rest-API'],
-      img: '/assets/img/tcg-vault-preview.png',
-      description: 'projects.tcg_vault.description',
-      github: 'https://github.com/Xargall/MTG-Vault',
-      demo: 'https://tcg-vault.mathias-mayer.de',
+      name: 'DA Bubble',
+      techs: ['HTML', 'CSS', 'TypeScript', 'Angular', 'Firebase'],
+      img: '/assets/img/dabubble-preview.png',
+      description: 'projects.dabubble.description',
+      github: 'https://github.com/Xargall/DABubble.git',
+      demo: 'https://dabubble.mathias-mayer.de',
     },
   ];
 
