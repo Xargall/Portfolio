@@ -75,6 +75,10 @@
     "newell": {
       "role": "Team Partner",
       "text": "I greatly valued working with Mathias Mayer on our shared project. He consistently stood out for his reliable way of working and made a significant contribution to our team's success. I can wholeheartedly recommend him as a technically competent and always collegial partner."
+    },
+    "altmann":{
+      "role":"Team Partner",
+      "text":"Working with Mathias was a great experience. He is excellent at solving problems independently, stays calm and positive under pressure, and always comes up with creative solutions. He never shies away from a challenge and approaches even difficult tasks with confidence. Communication with him is always pleasant and straightforward, and his code is clean, reliable, and integrates seamlessly into the overall project. He is a great teammate, and I would happily work with him again on any future project!"
     }
   },
   "contact": {
