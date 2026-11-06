@@ -20,7 +20,7 @@ export class ProjectsComponent {
       techs: ['HTML', 'CSS', 'TypeScript', 'Angular', 'Supabase'],
       img: '/assets/img/join-preview.png',
       description: 'projects.join.description',
-      github: 'ttps://github.com/Xargall/join.git',
+      github: 'https://github.com/Xargall/join.git',
       demo: 'https://join.mathias-mayer.de',
     },
     {
